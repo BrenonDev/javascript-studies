@@ -52,8 +52,17 @@ const pi = 3.14
 
 console.log(pi)
 
-pi = 3.1415 // ERRO: não é possível substituir o valor de uma constante
+// pi = 3.1415 // ERRO: não é possível substituir o valor de uma constante
 
 // const password // ERRO: constante deve ser inicializada com um valor
 
 // ======================================================================
+
+// ESCOPO
+
+// Definição: escopo é a área do código onde uma variável pode ser acessada.
+
+// Global: variável declarada no escopo global pode ser acessada em qualquer lugar do código
+// Local: variável declarada dentro de uma função só pode ser acessada dentro dessa função
+// Bloco: variável declarada dentro de um bloco (delimitado por {}) só pode ser acessada dentro desse bloco
+

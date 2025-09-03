@@ -1,3 +1,4 @@
+
 // VAR
 
 // Declarar uma variável sem valor
@@ -18,7 +19,9 @@ email = "brenon.oliverri.rondello@gmail.com"
 
 console.log(email)
 
+
 // ======================================================================
+
 
 // CASE-SENSITIVE
 
@@ -30,7 +33,9 @@ var Product = "Mouse Gamer"
 console.log(product)
 console.log(Product)
 
+
 // ======================================================================
+
 
 // LET
 
@@ -44,7 +49,9 @@ console.log(userName)
 
 userName = "Brenon" // permite apenas a substituição do valor
 
+
 // ======================================================================
+
 
 // CONST
 
@@ -56,7 +63,9 @@ console.log(pi)
 
 // const password // ERRO: constante deve ser inicializada com um valor
 
+
 // ======================================================================
+
 
 // ESCOPO
 
@@ -66,3 +75,33 @@ console.log(pi)
 // Local: variável declarada dentro de uma função só pode ser acessada dentro dessa função
 // Bloco: variável declarada dentro de um bloco (delimitado por {}) só pode ser acessada dentro desse bloco
 
+
+// ======================================================================
+
+// HOISTING
+
+// Definição: hoisting é o comportamento do JavaScript de "elevar" declarações ao topo do escopo atual (global ou local). 
+// Isso significa que uma variável pode ser referenciada antes de ser declarada. 
+// Atenção: apenas a declaração é movida; a inicialização permanece na linha original, o que pode gerar resultados inesperados.
+
+// TIPOS DE ESCOPO
+// - Escopo Global: variável acessível em qualquer lugar do código.
+// - Escopo Local (ou de função): variável acessível apenas dentro da função onde foi declarada.
+// - Escopo de Bloco: variável acessível apenas dentro do bloco (delimitado por { }) onde foi declarada. 
+//   Ex.: if, for, while, try/catch
+
+// VAR
+// - Escopo: global ou de função (não de bloco)
+// - Pode ser redeclarada e atualizada
+// - Sofre hoisting: pode ser usada antes da declaração, mas o valor será 'undefined' até ser inicializada
+
+// LET
+// - Escopo: bloco
+// - Pode ser atualizada, mas não redeclarada no mesmo escopo
+// - Não sofre hoisting no sentido de uso antes da declaração; acessá-la antes resulta em ReferenceError
+
+// CONST
+// - Escopo: bloco
+// - Não pode ser atualizada nem redeclarada
+// - Deve ser inicializada no momento da declaração
+// - Não sofre hoisting no sentido de uso antes da declaração; acessá-la antes resulta em ReferenceError

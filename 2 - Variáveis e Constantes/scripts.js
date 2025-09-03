@@ -1,6 +1,7 @@
 // VAR
 
 // Declarar uma variável sem valor
+
 var user
 
 console.log(user)
@@ -43,3 +44,16 @@ console.log(userName)
 
 userName = "Brenon" // permite apenas a substituição do valor
 
+// ======================================================================
+
+// CONST
+
+const pi = 3.14
+
+console.log(pi)
+
+pi = 3.1415 // ERRO: não é possível substituir o valor de uma constante
+
+// const password // ERRO: constante deve ser inicializada com um valor
+
+// ======================================================================

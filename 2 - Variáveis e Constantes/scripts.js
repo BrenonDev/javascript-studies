@@ -127,3 +127,18 @@ let blockLet2 = "Valor inicial"
 
 // ======================================================================
 
+// NOMES PARA VARIÁVEIS E CONSTANTES
+
+// Regras para nomes de variáveis e constantes:
+// - Devem começar com uma letra, underscore (_) ou cifrão ($)
+// - Podem conter letras, números, underscores e cifrões
+// - Não podem começar com um número
+// - Não podem ser palavras reservadas da linguagem (como var, let, const, if, else, function, return, etc.)
+// - Não podem conter espaços e caracteres especiais e de acentuação
+
+// Recomendações:
+// - Use nomes significativos que descrevam o propósito da variável ou constante
+// - Use camelCase para variáveis e funções (ex: userName, calculateTotal)
+// - Use UPPER_SNAKE_CASE para constantes (ex: MAX_USERS, API_KEY)
+// - Evite abreviações excessivas que possam dificultar a compreensão do código
+// - Seja consistente com a nomenclatura ao longo do código

@@ -84,12 +84,6 @@ console.log(pi)
 // Isso significa que uma variável pode ser referenciada antes de ser declarada. 
 // Atenção: apenas a declaração é movida; a inicialização permanece na linha original, o que pode gerar resultados inesperados.
 
-// TIPOS DE ESCOPO
-// - Escopo Global: variável acessível em qualquer lugar do código.
-// - Escopo Local (ou de função): variável acessível apenas dentro da função onde foi declarada.
-// - Escopo de Bloco: variável acessível apenas dentro do bloco (delimitado por { }) onde foi declarada. 
-//   Ex.: if, for, while, try/catch
-
 // VAR
 // - Escopo: global ou de função (não de bloco)
 // - Pode ser redeclarada e atualizada
@@ -105,3 +99,31 @@ console.log(pi)
 // - Não pode ser atualizada nem redeclarada
 // - Deve ser inicializada no momento da declaração
 // - Não sofre hoisting no sentido de uso antes da declaração; acessá-la antes resulta em ReferenceError
+
+// ======================================================================
+
+// EXEMPLO DE ESCOPO E HOISTING
+
+console.log(number) // undefined (devido ao hoisting)
+var number = 10
+console.log(number) // 10
+
+// Escopo de bloco
+{
+    var blockVar = "Estou dentro de um bloco"
+    let blockLet = "Estou dentro de um bloco"
+}
+
+console.log(blockVar) // "Estou dentro de um bloco" (var não respeita escopo de bloco)
+// console.log(blockLet) // ReferenceError: blockLet is not defined (let respeita escopo de bloco)
+
+var blockVar2 = "Valor inicial"
+let blockLet2 = "Valor inicial"
+
+{
+    console.log(blockVar2) // Acessa variável do escopo pai (var não respeita escopo de bloco)
+    console.log(blockLet2) // Acessa variável do escopo pai (let respeita escopo de bloco)
+}
+
+// ======================================================================
+

@@ -142,3 +142,19 @@ let blockLet2 = "Valor inicial"
 // - Use UPPER_SNAKE_CASE para constantes (ex: MAX_USERS, API_KEY)
 // - Evite abreviações excessivas que possam dificultar a compreensão do código
 // - Seja consistente com a nomenclatura ao longo do código
+
+// ======================================================================
+
+// TIPOS DE DADOS
+
+// JavaScript é uma linguagem dinâmica com tipos dinâmicos, o que significa que você não precisa declarar o tipo de dado de uma variável ou constante. O tipo é determinado automaticamente com base no valor atribuído.
+
+// Tipos primitivos:
+// - String: representa texto, delimitado por aspas simples (' '), aspas duplas (" ") ou crase (` `)
+// - Number: representa números, tanto inteiros quanto de ponto flutuante
+// - Boolean: representa valores lógicos, podendo ser true (verdadeiro) ou false (falso)
+// - Null: representa a ausência intencional de qualquer valor
+// - Undefined: representa uma variável que foi declarada, mas ainda não foi atribuída a um valor
+// - Symbol: representa um identificador único e imutável
+
+// ======================================================================

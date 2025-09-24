@@ -158,3 +158,25 @@ let blockLet2 = "Valor inicial"
 // - Symbol: representa um identificador único e imutável
 
 // ======================================================================
+
+// STRING
+
+// String é uma sequência de caracteres usada para representar texto. Em JavaScript, strings podem ser delimitadas por aspas simples (' '), aspas duplas (" ") ou crase (` `).
+let firstName = "Brenon"
+let lastName = 'Rondello'
+let fullName = `Meu nome é 
+${firstName} ${lastName}` // Permite interpolação e múltiplas linhas com crase
+console.log(fullName)
+console.log(typeof fullName) // string
+
+// Passar mais de um parâmetro para o console.log
+console.log("Nome:", firstName, "Sobrenome:", lastName)
+
+// Concatenação de strings
+let age = 24
+let welcomeMessage = "Olá, meu nome é " + firstName + " e eu tenho " + age + " anos."
+console.log(welcomeMessage)
+
+// Usando template literals (crase) para interpolação
+let greeting = `Olá, meu nome é ${firstName} e eu tenho ${age} anos.`
+console.log(greeting)

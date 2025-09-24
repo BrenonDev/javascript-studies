@@ -1,5 +1,4 @@
-
-// VAR
+console.log("=== VAR ===")
 
 // Declarar uma variável sem valor
 
@@ -23,7 +22,8 @@ console.log(email)
 // ======================================================================
 
 
-// CASE-SENSITIVE
+console.log("=== CASE-SENSITIVE ===")
+
 
 // Quando uma linguagem de programação é case-sensitive significa que ela é sensível a letras maiúsculas e minúsculas
 
@@ -37,7 +37,7 @@ console.log(Product)
 // ======================================================================
 
 
-// LET
+console.log("=== LET ===")
 
 // Declarar uma variável sem valor
 
@@ -53,7 +53,7 @@ userName = "Brenon" // permite apenas a substituição do valor
 // ======================================================================
 
 
-// CONST
+console.log("=== CONST ===")
 
 const pi = 3.14
 
@@ -67,7 +67,7 @@ console.log(pi)
 // ======================================================================
 
 
-// ESCOPO
+console.log("=== ESCOPO ===")
 
 // Definição: escopo é a área do código onde uma variável pode ser acessada.
 
@@ -78,7 +78,8 @@ console.log(pi)
 
 // ======================================================================
 
-// HOISTING
+
+console.log("=== HOISTING ===")
 
 // Definição: hoisting é o comportamento do JavaScript de "elevar" declarações ao topo do escopo atual (global ou local). 
 // Isso significa que uma variável pode ser referenciada antes de ser declarada. 
@@ -100,9 +101,11 @@ console.log(pi)
 // - Deve ser inicializada no momento da declaração
 // - Não sofre hoisting no sentido de uso antes da declaração; acessá-la antes resulta em ReferenceError
 
+
 // ======================================================================
 
-// EXEMPLO DE ESCOPO E HOISTING
+
+console.log("=== EXEMPLO DE ESCOPO E HOISTING ===")
 
 console.log(number) // undefined (devido ao hoisting)
 var number = 10
@@ -125,9 +128,11 @@ let blockLet2 = "Valor inicial"
     console.log(blockLet2) // Acessa variável do escopo pai (let respeita escopo de bloco)
 }
 
+
 // ======================================================================
 
-// NOMES PARA VARIÁVEIS E CONSTANTES
+
+console.log("=== NOMES PARA VARIÁVEIS E CONSTANTES ===")
 
 // Regras para nomes de variáveis e constantes:
 // - Devem começar com uma letra, underscore (_) ou cifrão ($)
@@ -143,9 +148,18 @@ let blockLet2 = "Valor inicial"
 // - Evite abreviações excessivas que possam dificultar a compreensão do código
 // - Seja consistente com a nomenclatura ao longo do código
 
+// Exemplo de nomes válidos:
+let userAge = 25
+const MAX_HEIGHT = 180
+var $price = 99.99
+let _tempValue = 42
+
+
 // ======================================================================
 
-// TIPOS DE DADOS
+
+console.log("=== TIPOS DE DADOS ===")
+
 
 // JavaScript é uma linguagem dinâmica com tipos dinâmicos, o que significa que você não precisa declarar o tipo de dado de uma variável ou constante. O tipo é determinado automaticamente com base no valor atribuído.
 
@@ -157,9 +171,11 @@ let blockLet2 = "Valor inicial"
 // - Undefined: representa uma variável que foi declarada, mas ainda não foi atribuída a um valor
 // - Symbol: representa um identificador único e imutável
 
+
 // ======================================================================
 
-// STRING
+
+console.log("=== STRING ===")
 
 // String é uma sequência de caracteres usada para representar texto. Em JavaScript, strings podem ser delimitadas por aspas simples (' '), aspas duplas (" ") ou crase (` `).
 let firstName = "Brenon"
@@ -180,3 +196,21 @@ console.log(welcomeMessage)
 // Usando template literals (crase) para interpolação
 let greeting = `Olá, meu nome é ${firstName} e eu tenho ${age} anos.`
 console.log(greeting)
+
+
+// ======================================================================
+
+
+console.log("=== NUMBER ===")
+
+// Number é um tipo de dado que representa tanto números inteiros quanto números de ponto flutuante (decimais).
+let integerNum = 42 // Número inteiro
+let negativeNum = -7 // Número negativo
+let floatNum = 3.14 // Número de ponto flutuante
+let notANumber = "Isso não é um número" / 2 // Not a Number (resultado de uma operação inválida)
+
+console.log(integerNum, typeof integerNum) // 42 'number'
+console.log(negativeNum, typeof negativeNum) // -7 'number'
+console.log(floatNum, typeof floatNum) // 3.14 'number'
+console.log(notANumber, typeof notANumber) // NaN
+

@@ -9,4 +9,13 @@ console.log("=== EXPRESSÕES E OPERADORES ===")
 
 // ======================================================================
 
+console.log("=== OPERADORES ARITMÉTICOS ===")
 
+// Operadores Aritméticos são usados para realizar operações matemáticas básicas.
+
+console.log("Adição: ", 5 + 3)          // Adição
+console.log("Subtração: ", 5 - 3)       // Subtração
+console.log("Multiplicação: ", 5 * 3)   // Multiplicação
+console.log("Divisão: ", 5 / 3)         // Divisão
+console.log("Módulo: ", 5 % 3)          // Resto da divisão
+console.log("Exponenciação: ", 5 ** 3)  // Potência

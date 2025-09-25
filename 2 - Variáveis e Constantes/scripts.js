@@ -158,7 +158,7 @@ let _tempValue = 42
 // ======================================================================
 
 
-console.log("=== TIPOS DE DADOS ===")
+console.log("=== TIPOS DE DADOS PRIMITIVOS ===")
 
 
 // JavaScript é uma linguagem dinâmica com tipos dinâmicos, o que significa que você não precisa declarar o tipo de dado de uma variável ou constante. O tipo é determinado automaticamente com base no valor atribuído.
@@ -214,3 +214,69 @@ console.log(negativeNum, typeof negativeNum) // -7 'number'
 console.log(floatNum, typeof floatNum) // 3.14 'number'
 console.log(notANumber, typeof notANumber) // NaN
 
+
+// ======================================================================
+
+
+console.log("=== BOOLEAN ===")
+
+// Boolean é um tipo de dado que representa valores lógicos, podendo ser true (verdadeiro) ou false (falso).
+let isJavaScriptFun = true
+let isFishTasty = false
+console.log(isJavaScriptFun, typeof isJavaScriptFun) // true 'boolean'
+console.log(isFishTasty, typeof isFishTasty) // false 'boolean'
+
+
+// ======================================================================
+
+
+console.log("=== NULL ===")
+
+// Null é um tipo especial que representa a ausência intencional de qualquer valor. É usado para indicar que uma variável não possui um valor válido.
+let emptyValue = null
+console.log(emptyValue, typeof emptyValue) // null 'object' (isso é um comportamento histórico do JavaScript)
+
+
+// =====================================================================
+
+
+console.log("=== UNDEFINED ===")
+
+// Undefined é um tipo que indica que uma variável foi declarada, mas ainda não foi atribuída a um valor.
+let notAssigned
+console.log(notAssigned, typeof notAssigned) // undefined 'undefined'
+
+
+// ======================================================================
+
+
+console.log("=== SYMBOL ===")
+
+// Symbol é um tipo de dado que representa um identificador único e imutável. É frequentemente usado para criar propriedades de objetos que não colidem com outras propriedades.
+let sym1 = Symbol("descricao")
+let sym2 = Symbol("descricao")
+console.log(sym1 === sym2) // false (são símbolos diferentes)
+console.log(typeof sym1) // 'symbol'
+
+
+// ======================================================================
+
+
+console.log("=== CONVERSÃO E COERÇÃO DE TIPOS ===")
+
+// Conversão de tipos é o processo de transformar um valor de um tipo para outro. Em JavaScript, isso pode ser feito explicitamente (conversão explícita) ou automaticamente (coerção de tipos).
+
+// Métodos de conversão explícita:
+// - String(): converte um valor para string
+// - Number(): converte um valor para número
+// - Boolean(): converte um valor para booleano
+
+// Conversão explícita
+let numString = "123"
+console.log(numString, typeof numString) // "123" 'string'
+let convertedNumber = Number(numString) // Converte string para número
+console.log(convertedNumber, typeof convertedNumber) // 123 'number'
+
+// Coerção de tipos (automática)
+let coercedString = "O número é " + 5 // Número é convertido para string
+console.log(coercedString, typeof coercedString) // "O número é 5" 'string'

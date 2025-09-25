@@ -62,4 +62,16 @@ console.log("Após b **= 3: ", b)
 
 // ======================================================================
 
+console.log("=== ORDEM DE PRECEDÊNCIA ===")
 
+// A ordem de precedência determina a sequência em que os operadores são avaliados em uma expressão. Operadores com maior precedência são avaliados antes dos operadores com menor precedência.
+
+// Os níveis de precedência dos operadores aritméticos são (do mais alto para o mais baixo):
+// 1. Exponenciação (**)
+// 2. Multiplicação (*), Divisão (/), Módulo (%)
+// 3. Adição (+), Subtração (-)
+// 4. Relacionais (<, >, <=, >=)
+// 5. Igualdade (==, ===, !=, !==)
+// 6. Lógicos (&&, ||, !)
+
+// Parênteses podem ser usados para alterar a ordem de avaliação, forçando a avaliação de expressões dentro dos parênteses primeiro.

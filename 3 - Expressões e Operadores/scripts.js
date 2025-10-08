@@ -96,3 +96,11 @@ console.log("5 !== '5': ", 5 !== '5') // true (compara valor e tipo)
 
 // ======================================================================
 
+console.log("=== MAIOR, MENOR, MAIOR OU IGUAL, MENOR OU IGUAL ===")
+
+// Operadores Relacionais são usados para comparar valores.
+
+console.log("5 > 3: ", 5 > 3)   // true (maior que)
+console.log("5 < 3: ", 5 < 3)   // false (menor que)
+console.log("5 >= 5: ", 5 >= 5) // true (maior ou igual a)
+console.log("3 <= 5: ", 3 <= 5) // true (menor ou igual a)

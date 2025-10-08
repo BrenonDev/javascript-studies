@@ -126,3 +126,12 @@ console.log("Após x %= 3: ", x)
 x **= 3 // Atribuição com exponenciação (x = x ** 3)
 console.log("Após x **= 3: ", x)
 
+// ======================================================================
+
+console.log("=== OPERADORES LÓGICOS ===")
+
+// Operadores Lógicos são usados para combinar expressões booleanas.
+
+console.log("true && false: ", true && false) // E lógico (AND) - true se ambos os operandos forem true
+console.log("true || false: ", true || false) // OU lógico (OR) - true se pelo menos um dos operandos for true
+console.log("!true: ", !true)                 // Negação lógica (NOT) - inverte o valor booleano

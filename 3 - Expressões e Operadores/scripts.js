@@ -104,3 +104,25 @@ console.log("5 > 3: ", 5 > 3)   // true (maior que)
 console.log("5 < 3: ", 5 < 3)   // false (menor que)
 console.log("5 >= 5: ", 5 >= 5) // true (maior ou igual a)
 console.log("3 <= 5: ", 3 <= 5) // true (menor ou igual a)
+
+// ======================================================================
+
+console.log("=== OPERADORES DE ATRIBUIÇÃO ===")
+
+// Operadores de Atribuição são usados para atribuir valores a variáveis.
+
+let x = 10 // Atribuição simples
+console.log("Valor inicial de x: ", x)
+x += 5 // Atribuição com adição (x = x + 5)
+console.log("Após x += 5: ", x)
+x -= 3 // Atribuição com subtração (x = x - 3)
+console.log("Após x -= 3: ", x)
+x *= 2 // Atribuição com multiplicação (x = x * 2)
+console.log("Após x *= 2: ", x)
+x /= 4 // Atribuição com divisão (x = x / 4)
+console.log("Após x /= 4: ", x)
+x %= 3 // Atribuição com módulo (x = x % 3)
+console.log("Após x %= 3: ", x)
+x **= 3 // Atribuição com exponenciação (x = x ** 3)
+console.log("Após x **= 3: ", x)
+

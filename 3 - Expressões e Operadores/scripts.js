@@ -75,3 +75,24 @@ console.log("=== ORDEM DE PRECEDÊNCIA ===")
 // 6. Lógicos (&&, ||, !)
 
 // Parênteses podem ser usados para alterar a ordem de avaliação, forçando a avaliação de expressões dentro dos parênteses primeiro.
+
+// ======================================================================
+
+console.log("=== IGUAL A E DIFERENTE DE ===")
+
+// Operadores de Igualdade (==) e Diferença (!=) são usados para comparar valores.
+
+console.log("5 == '5': ", 5 == '5') // true (compara valores, não tipos)
+console.log("5 != '5': ", 5 != '5') // false (compara valores, não tipos)
+
+// ======================================================================
+
+console.log("=== ESTRITAMENTE IGUAL E ESTRITAMENTE DIFERENTE ===")
+
+// Operadores de Estritamente Igual (===) e Estritamente Diferente (!==) comparam tanto valores quanto tipos.
+
+console.log("5 === '5': ", 5 === '5') // false (compara valor e tipo)
+console.log("5 !== '5': ", 5 !== '5') // true (compara valor e tipo)
+
+// ======================================================================
+

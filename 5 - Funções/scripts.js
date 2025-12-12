@@ -101,3 +101,30 @@ let somar = (a, b) => {
     return a + b
 }
 console.log("Soma:", somar(5, 3))
+
+// Arrow function de uma única linha com retorno implícito
+
+let dividir = (a, b) => a / b
+console.log("Divisão:", dividir(10, 2))
+
+
+// ======================================================================
+
+
+console.log("=== CALLBACK FUNCTION ===")
+
+// Funções de callback são passadas como argumentos para outras funções e são executadas após a conclusão de uma operação.
+
+// Exemplo de função que recebe um callback inline
+function executarOperacao(a, b, operacao) {
+    return operacao(a, b)
+}
+let resultadoSoma = executarOperacao(7, 3, (x, y) => x + y)
+console.log("Resultado da operação (soma):", resultadoSoma)
+
+// Exemplo de função que recebe um callback definido previamente
+function subtrair(x, y) {
+    return x - y
+}
+let resultadoSubtracao = executarOperacao(10, 4, subtrair)
+console.log("Resultado da operação (subtração):", resultadoSubtracao)

@@ -74,3 +74,17 @@ function signIn(email, password) {
 }
 
 signIn("usuario@example.com", "senha123")
+
+
+// ======================================================================
+
+
+console.log("=== FUNÇÃO ANÔNIMA ===")
+
+// Funções anônimas são funções sem nome, frequentemente usadas como argumentos para outras funções ou atribuídas a variáveis.
+
+let multiplicar = function(x, y) {
+    return x * y
+}
+let produto = multiplicar(4, 6)
+console.log("Produto:", produto)

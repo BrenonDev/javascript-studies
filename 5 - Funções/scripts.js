@@ -52,3 +52,25 @@ function minhaFuncao() {
 
 minhaFuncao()
 // console.log(mensagem) // ERRO: mensagem is not defined
+
+
+// ======================================================================
+
+
+console.log("=== COMENTÁRIO DE DOCUMENTAÇÃO ===")
+
+// É uma boa prática documentar suas funções para explicar o que elas fazem, seus parâmetros e valores de retorno.
+
+/**
+ * Autentica um usuário com email e senha.
+ * 
+ * @param {*} email user email.
+ * @param {*} password user password with at least 6 characters.
+ * @returns {boolean} true if authentication is successful, false otherwise.
+ */
+function signIn(email, password) {
+    // Lógica de autenticação aqui
+    return true // Simulação de login bem-sucedido
+}
+
+signIn("usuario@example.com", "senha123")

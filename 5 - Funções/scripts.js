@@ -41,3 +41,14 @@ console.log("Resultado da soma:", resultado)
 // ======================================================================
 
 
+console.log("=== ESCOPO DE FUNÇÃO ===")
+
+// Variáveis declaradas dentro de uma função têm escopo local e não podem ser acessadas fora da função.
+
+function minhaFuncao() {
+    let mensagem = "Olá do escopo da função!"
+    console.log(mensagem)
+}
+
+minhaFuncao()
+// console.log(mensagem) // ERRO: mensagem is not defined

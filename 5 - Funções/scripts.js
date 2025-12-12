@@ -88,3 +88,16 @@ let multiplicar = function(x, y) {
 }
 let produto = multiplicar(4, 6)
 console.log("Produto:", produto)
+
+
+// ======================================================================
+
+
+console.log("=== ARROW FUNCTION ===")
+
+// Arrow functions são uma sintaxe mais concisa para criar funções, especialmente úteis em callbacks e funções de uma única linha.
+
+let somar = (a, b) => {
+    return a + b
+}
+console.log("Soma:", somar(5, 3))

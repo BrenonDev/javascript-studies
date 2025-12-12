@@ -45,3 +45,24 @@ console.log({} ? "Verdadeiro" : "Falso") // Verdadeiro
 console.log(function(){} ? "Verdadeiro" : "Falso") // Verdadeiro
 
 
+// ======================================================================
+
+console.log("=== IF, ELSE IF, ELSE ===")
+
+// As estruturas condicionais if, else if e else permitem executar diferentes blocos de código com base em múltiplas condições.
+
+// if é usado para testar uma condição inicial.
+// else if é usado para testar condições adicionais se a condição anterior for falsa.
+// else é usado para executar um bloco de código se todas as condições anteriores forem falsas.
+
+let nota = 85
+
+if (nota >= 90) {
+    console.log("Aprovado com nota excelente!")
+} else if (nota >= 80) {
+    console.log("Aprovado com nota boa!")
+} else if (nota >= 70) {
+    console.log("Aprovado com nota regular!")
+} else {
+    console.log("Reprovado!")
+}

@@ -47,6 +47,7 @@ console.log(function(){} ? "Verdadeiro" : "Falso") // Verdadeiro
 
 // ======================================================================
 
+
 console.log("=== IF, ELSE IF, ELSE ===")
 
 // As estruturas condicionais if, else if e else permitem executar diferentes blocos de código com base em múltiplas condições.
@@ -104,3 +105,28 @@ switch (diaSemana) {
         nomeDia = "Dia inválido"
 }
 console.log("O dia da semana é:", nomeDia)
+
+
+// ======================================================================
+
+
+console.log("=== TRATAMENTO DE EXCEÇÕES ===")
+
+// O tratamento de exceções em JavaScript é feito usando as palavras-chave try, catch e finally.
+
+// try: Bloco de código onde uma exceção pode ocorrer.
+// catch: Bloco de código que lida com a exceção se ela ocorrer.
+// finally: Bloco de código que é executado após o try e catch, independentemente de uma exceção ter ocorrido ou não.
+
+// throw new Error(): Usado para lançar uma exceção personalizada.
+
+try {
+    let resultado = 0
+    if (resultado === 0) {
+        throw new Error("O resultado é igual a 0") // Lança uma exceção personalizada
+    } 
+} catch (error) {
+    console.log("Erro capturado:", error.message) // Lida com o erro
+} finally {
+    console.log("Bloco finally executado.")
+}

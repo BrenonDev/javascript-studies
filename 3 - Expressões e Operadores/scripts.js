@@ -9,6 +9,7 @@ console.log("=== EXPRESSÕES E OPERADORES ===")
 
 // ======================================================================
 
+
 console.log("=== OPERADORES ARITMÉTICOS ===")
 
 // Operadores Aritméticos são usados para realizar operações matemáticas básicas.
@@ -62,6 +63,7 @@ console.log("Após b **= 3: ", b)
 
 // ======================================================================
 
+
 console.log("=== ORDEM DE PRECEDÊNCIA ===")
 
 // A ordem de precedência determina a sequência em que os operadores são avaliados em uma expressão. Operadores com maior precedência são avaliados antes dos operadores com menor precedência.
@@ -76,7 +78,9 @@ console.log("=== ORDEM DE PRECEDÊNCIA ===")
 
 // Parênteses podem ser usados para alterar a ordem de avaliação, forçando a avaliação de expressões dentro dos parênteses primeiro.
 
+
 // ======================================================================
+
 
 console.log("=== IGUAL A E DIFERENTE DE ===")
 
@@ -85,7 +89,9 @@ console.log("=== IGUAL A E DIFERENTE DE ===")
 console.log("5 == '5': ", 5 == '5') // true (compara valores, não tipos)
 console.log("5 != '5': ", 5 != '5') // false (compara valores, não tipos)
 
+
 // ======================================================================
+
 
 console.log("=== ESTRITAMENTE IGUAL E ESTRITAMENTE DIFERENTE ===")
 
@@ -94,7 +100,9 @@ console.log("=== ESTRITAMENTE IGUAL E ESTRITAMENTE DIFERENTE ===")
 console.log("5 === '5': ", 5 === '5') // false (compara valor e tipo)
 console.log("5 !== '5': ", 5 !== '5') // true (compara valor e tipo)
 
+
 // ======================================================================
+
 
 console.log("=== MAIOR, MENOR, MAIOR OU IGUAL, MENOR OU IGUAL ===")
 
@@ -105,7 +113,9 @@ console.log("5 < 3: ", 5 < 3)   // false (menor que)
 console.log("5 >= 5: ", 5 >= 5) // true (maior ou igual a)
 console.log("3 <= 5: ", 3 <= 5) // true (menor ou igual a)
 
+
 // ======================================================================
+
 
 console.log("=== OPERADORES DE ATRIBUIÇÃO ===")
 
@@ -126,7 +136,9 @@ console.log("Após x %= 3: ", x)
 x **= 3 // Atribuição com exponenciação (x = x ** 3)
 console.log("Após x **= 3: ", x)
 
+
 // ======================================================================
+
 
 console.log("=== OPERADORES LÓGICOS ===")
 

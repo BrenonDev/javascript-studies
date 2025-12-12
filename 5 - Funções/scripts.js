@@ -22,3 +22,22 @@ function saudacao(nome) {
 
 // Chamada da função com argumento
 saudacao("Maria")
+
+
+// ======================================================================
+
+
+console.log("=== RETORNO DE VALORES ===")
+
+// Funções podem retornar valores usando a palavra-chave return.
+function soma(a, b) {
+    return a + b
+}
+
+let resultado = soma(5, 3)
+console.log("Resultado da soma:", resultado)
+
+
+// ======================================================================
+
+

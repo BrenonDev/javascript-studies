@@ -15,3 +15,36 @@ console.log("=== DOCUMENT OBJECT MODEL (DOM) ===")
 //  Element <title>   Element <h1>     Element <p>
 //             |          |              |
 //  Text ("Site")     Text ("Título")  Text ("Hello, World!")
+
+
+// ======================================================================
+
+
+console.log("=== ACESSANDO ELEMENTOS DO DOM ===")
+
+// Você pode acessar elementos do DOM usando métodos como getElementById, getElementsByClassName, getElementsByTagName, querySelector e querySelectorAll.
+
+// Visualizar o conteúdo do document no console
+console.log(document)
+
+// Obter o título da página
+console.log(document.title)
+
+// Acessar um elemento pelo ID
+const elementoPorID = document.getElementById("guest-1")
+console.log(elementoPorID)
+
+// Mostrar as propriedades do elemento
+console.dir(elementoPorID)
+
+// Acessar elementos pela classe
+const elementosPorClasse = document.getElementsByClassName("guest")
+console.log(elementosPorClasse)
+
+// Acessar cada elemento da lista de elementos com a classe "guest"
+console.log(elementosPorClasse[0])
+console.log(elementosPorClasse.item(1))
+
+// Acessar elementos pela tag
+const elementosPorTag = document.getElementsByTagName("li")
+console.log(elementosPorTag)

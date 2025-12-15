@@ -104,3 +104,28 @@ console.log(guest1.innerText)
 // Modificar o conteúdo HTML do elemento
 guest1.innerHTML = "<i>Convidado 1 - Itálico</i>"
 console.log(guest1.innerHTML)
+
+
+// ======================================================================
+
+
+console.log("=== ALTERANDO ESTILOS ===")
+
+// Você pode alterar os estilos dos elementos do DOM usando a propriedade style.
+
+// Adicionar estilo ao elemento
+const input = document.querySelector("#name")
+input.classList.add("input-error")
+
+// Remover estilo do elemento
+input.classList.remove("input-error")
+
+// Alternar estilo do elemento se já existe a classe, remove; se não existe, adiciona
+input.classList.toggle("input-error")
+
+// Alterar estilo diretamente via JavaScript
+const button = document.querySelector("button")
+button.style.backgroundColor = "#4CAF50"
+
+
+// ======================================================================

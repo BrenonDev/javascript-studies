@@ -264,3 +264,33 @@ form.addEventListener("submit", (event) => {
 
 
 // ======================================================================
+
+
+console.log("=== EVENTOS EM INPUT ===")
+
+// Você pode adicionar eventos a elementos de entrada (input) para interagir com os usuários enquanto eles digitam ou alteram valores.
+
+const inputNameField = document.querySelector("input")
+
+// Evento que detecta a tecla pressionada
+inputNameField.addEventListener("keydown", (event) => {
+  console.log(`Tecla pressionada (keydown): ${event.key}`)
+})
+
+// Evento que detecta a tecla pressionada quando o caractere é inserido
+inputNameField.addEventListener("keypress", (event) => {
+  console.log(`Tecla pressionada (keypress): ${event.key}`)
+})
+
+// Evento que quando o valor do input é alterado ao sair do campo
+inputNameField.addEventListener("change", (event) => {
+  console.log(`Valor alterado (change): ${event.target.value}`)
+})
+
+// Evento que detecta quando o valor do input é alterado em tempo real
+inputNameField.addEventListener("input", (event) => {
+  console.log(`Valor em tempo real (input): ${event.target.value}`)
+})
+
+
+// ======================================================================

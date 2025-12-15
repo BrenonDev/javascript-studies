@@ -209,10 +209,10 @@ window.addEventListener("load", () => {
 
 addEventListener("click", (event) => {
   console.log("A página foi clicada.")
-  console.log(event); // Retorna todas as informações do evento
-  console.log(event.target); // Retorna o elemento que foi clicado
-  console.log(event.target.textContent); // Retorna o conteúdo de texto do elemento que foi clicado
-  console.log(event.type); // Retorna o tipo do evento
+  console.log(event) // Retorna todas as informações do evento
+  console.log(event.target) // Retorna o elemento que foi clicado
+  console.log(event.target.textContent) // Retorna o conteúdo de texto do elemento que foi clicado
+  console.log(event.type) // Retorna o tipo do evento
 })
 
 
@@ -227,7 +227,7 @@ const ul = document.querySelector("ul")
 
 ul.addEventListener("scroll", (event) => {
     console.log("A lista de convidados foi rolada.")
-    console.log(ul.scrollTop); // Retorna a posição atual da rolagem
+    console.log(ul.scrollTop) // Retorna a posição atual da rolagem
     
     if (ul.scrollTop >= ul.scrollHeight - ul.clientHeight) {
     ul.scrollTo({
@@ -319,3 +319,32 @@ console.log(result) // Retorna um array com todas as correspondências encontrad
 
 
 // ======================================================================
+
+
+console.log("=== MANIPULANDO VALOR DO INPUT COM REGEX ===")
+
+// Você pode usar expressões regulares para validar e manipular o valor dos campos de entrada (input) em formulários.
+
+const inputRegex = document.querySelector("input")
+const formRegex = document.querySelector("form")
+
+// Evento que testa o valo do input ao envio do formulário
+inputRegex.addEventListener("input", (event) => {
+    // Remover todos os caracteres que não são letras (A-Z, a-z)
+    const value = input.value
+    const regex = /\D+/g
+    
+    // Exibir no console o valor do input que corresponde ao regex
+    console.log(value.match(regex))
+    
+    const isValid = regex.test(value)
+    console.log(isValid) // Retorna true se houver correspondência, false caso contrário
+})
+
+// Evento que manipula o valor do input ao enviar o formulário
+formRegex.addEventListener("submit", (event) => {
+    event.preventDefault() // Previne o comportamento padrão do formulário
+    const regex = /\D+/g
+    const value = inputRegex.value.replace(regex, "")
+    console.log(value)
+})

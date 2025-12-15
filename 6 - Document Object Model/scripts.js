@@ -173,3 +173,27 @@ lastGuest.remove()
 
 
 // ======================================================================
+
+
+console.log("=== MANIPULANDO ATRIBUTOS ===")
+
+// Você pode manipular os atributos dos elementos do DOM usando métodos como getAttribute, setAttribute, removeAttribute e hasAttribute.
+
+const inputName = document.querySelector("#name")
+
+// Obter um valor de atributo
+const inputType = inputName.getAttribute("type")
+console.log(inputType) // text
+
+// Atualizar um atributo (atributo, valor)
+inputName.setAttribute("placeholder", "Digite seu nome aqui")
+
+// Remover um atributo
+inputName.removeAttribute("placeholder")
+
+// Verificar se um atributo existe
+const hasName = inputName.hasAttribute("name")
+console.log(hasName) // false
+
+
+// ======================================================================

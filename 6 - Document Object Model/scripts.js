@@ -72,3 +72,35 @@ const todosGuests = document.querySelectorAll(".guest")
 console.log(todosGuests)
 
 
+// ======================================================================
+
+
+console.log("=== MANIPULANDO O CONTÉUDO ===")
+
+// Você pode manipular o conteúdo dos elementos do DOM usando propriedades como:
+
+// textContent: Define ou retorna o conteúdo textual de um nó e seus descendentes.
+// innerText: Define ou retorna o conteúdo textual "visível" de um elemento.
+// innerHTML: Define ou retorna o conteúdo HTML de um elemento.
+
+// Exibir o conteúdo vísivel e invisível do elemento
+const guest1 = document.querySelector("#guest-1")
+console.log(guest1.textContent)
+
+// Exibir somente o conteúdo visível do elemento
+console.log(guest1.innerText)
+
+// Exibe o conteúdo HTML do elemento
+console.log(guest1.innerHTML)
+
+// Modificar o conteúdo do elemento
+guest1.textContent = "Convidado 1 - Novo Texto"
+console.log(guest1.textContent)
+
+// Modificar o conteúdo visível do elemento
+guest1.innerText = "Convidado 1 - Atualizado"
+console.log(guest1.innerText)
+
+// Modificar o conteúdo HTML do elemento
+guest1.innerHTML = "<i>Convidado 1 - Itálico</i>"
+console.log(guest1.innerHTML)

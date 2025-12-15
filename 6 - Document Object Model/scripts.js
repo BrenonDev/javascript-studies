@@ -197,3 +197,29 @@ console.log(hasName) // false
 
 
 // ======================================================================
+
+
+console.log("=== EVENTOS ===")
+
+// Você pode adicionar eventos aos elementos do DOM usando o método addEventListener. Eventos são ações que ocorrem no navegador, como cliques, movimentos do mouse, pressionamento de teclas, etc.
+
+window.addEventListener("load", () => {
+  console.log("A página foi carregada.")
+})
+
+addEventListener("click", (event) => {
+  console.log("A página foi clicada.")
+  console.log(event); // Retorna todas as informações do evento
+  console.log(event.target); // Retorna o elemento que foi clicado
+  console.log(event.target.textContent); // Retorna o conteúdo de texto do elemento que foi clicado
+  console.log(event.type); // Retorna o tipo do evento
+})
+
+const buttonSubmit = document.querySelector("button")
+buttonSubmit.addEventListener("click", (event) => {
+  event.preventDefault() // Previne o comportamento padrão do botão (enviar o formulário)
+  console.log("Botão de enviar foi clicado.")
+})
+
+
+// ======================================================================

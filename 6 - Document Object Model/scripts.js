@@ -239,6 +239,28 @@ ul.addEventListener("scroll", (event) => {
 
 const buttonSubmit = document.querySelector("button")
 buttonSubmit.addEventListener("click", (event) => {
-  event.preventDefault() // Previne o comportamento padrão do botão (enviar o formulário)
   console.log("Botão de enviar foi clicado.")
 })
+
+
+// ======================================================================
+
+
+console.log("=== EVENTOS DE FORMULÁRIO ===")
+
+// Você pode adicionar eventos a formulários e seus elementos para manipular o envio de dados e interagir com os usuários.
+
+const form = document.querySelector("form")
+
+form.onsubmit = (event) => {
+  event.preventDefault() // Previne o comportamento padrão do formulário
+  console.log("Formulário enviado via onsubmit.")
+}
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault() // Previne o comportamento padrão do formulário
+    console.log("Formulário enviado via addEventListener.")
+})
+
+
+// ======================================================================

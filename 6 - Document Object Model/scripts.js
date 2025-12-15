@@ -141,7 +141,7 @@ const guests = document.querySelector("ul")
 // Criar um novo elemento
 const newGuest = document.createElement("li")
 const guestName = document.createElement("span")
-guestName.textContent = "Convidado 3"
+guestName.textContent = "Último Convidado"
 
 // Adicionar o nome do convidado ao novo elemento
 newGuest.append(guestName)
@@ -156,7 +156,7 @@ guests.prepend(anotherGuest)
 
 // Adiocionar o novo elemento no final da lista de convidados (apenas um elemento)
 const lastGuest = document.createElement("li")
-lastGuest.textContent = "Convidado 4"
+lastGuest.textContent = "Convidado X"
 guests.appendChild(lastGuest)
 
 // Adicionar uma classe aos novos elementos
@@ -215,11 +215,30 @@ addEventListener("click", (event) => {
   console.log(event.type); // Retorna o tipo do evento
 })
 
+
+// ======================================================================
+
+
+console.log("=== EVENTO EM UM ELEMENTO ESPECÍFICO ===")
+
+// Você pode adicionar eventos a elementos específicos do DOM para interagir com eles.
+
+const ul = document.querySelector("ul")
+
+ul.addEventListener("scroll", (event) => {
+    console.log("A lista de convidados foi rolada.")
+    console.log(ul.scrollTop); // Retorna a posição atual da rolagem
+    
+    if (ul.scrollTop >= ul.scrollHeight - ul.clientHeight) {
+    ul.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    }) // Rola a lista de volta para o topo se a rolagem for maior ou igual a 300px
+}
+})
+
 const buttonSubmit = document.querySelector("button")
 buttonSubmit.addEventListener("click", (event) => {
   event.preventDefault() // Previne o comportamento padrão do botão (enviar o formulário)
   console.log("Botão de enviar foi clicado.")
 })
-
-
-// ======================================================================

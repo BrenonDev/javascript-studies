@@ -129,3 +129,47 @@ button.style.backgroundColor = "#4CAF50"
 
 
 // ======================================================================
+
+
+console.log("=== CRIANDO E REMOVENDO ELEMENTOS ===")
+
+// Você pode criar novos elementos do DOM usando o método createElement e removê-los usando o método removeChild ou a propriedade remove.
+
+// Selecionar o elemento pai onde o novo elemento será adicionado
+const guests = document.querySelector("ul")
+
+// Criar um novo elemento
+const newGuest = document.createElement("li")
+const guestName = document.createElement("span")
+guestName.textContent = "Convidado 3"
+
+// Adicionar o nome do convidado ao novo elemento
+newGuest.append(guestName)
+
+// Adicionar o novo elemento no final da lista de convidados (pode adicionar mais de um elemento)
+guests.append(newGuest)
+
+// Adicionar o novo elemento no início da lista de convidados (pode adicionar mais de um elemento)
+const anotherGuest = document.createElement("li")
+anotherGuest.textContent = "Convidado 0"
+guests.prepend(anotherGuest)
+
+// Adiocionar o novo elemento no final da lista de convidados (apenas um elemento)
+const lastGuest = document.createElement("li")
+lastGuest.textContent = "Convidado 4"
+guests.appendChild(lastGuest)
+
+// Adicionar uma classe aos novos elementos
+newGuest.classList.add("guest")
+anotherGuest.classList.add("guest")
+lastGuest.classList.add("guest")
+
+// Remover um elemento específico
+const guestToRemove = document.querySelector("#guest-2")
+guests.removeChild(guestToRemove)
+
+// Remover um elemento diretamente
+lastGuest.remove()
+
+
+// ======================================================================

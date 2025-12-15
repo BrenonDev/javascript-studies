@@ -294,3 +294,28 @@ inputNameField.addEventListener("input", (event) => {
 
 
 // ======================================================================
+
+
+console.log("=== EXPRESSÕES REGULARES (REGEX) ===")
+
+// Expressões regulares (regex) são padrões usados para combinar combinações de caracteres em strings. Elas são frequentemente usadas para validação de entrada, pesquisa e manipulação de texto.
+
+// Exemplo de regex: /\D+/g
+
+// / indica o início da expressão regular
+// \D corresponde a qualquer caractere que não seja um dígito (0-9)
+// + indica que deve haver uma ou mais ocorrências do padrão anterior
+// / indica o fim da expressão regular
+// g é uma flag que significa "global", ou seja, a busca será feita em toda a string, não apenas na primeira ocorrência
+
+const sampleText = "User123 logged in at 10:45AM on 2024-06-15."
+
+// Usar regex para encontrar todas as sequências de caracteres que não são dígitos
+const regex = /\D+/g
+const result = sampleText.match(regex)
+console.log(result) // Retorna um array com todas as correspondências encontradas
+
+// RegExr - https://regexr.com/
+
+
+// ======================================================================

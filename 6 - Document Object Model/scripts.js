@@ -48,3 +48,27 @@ console.log(elementosPorClasse.item(1))
 // Acessar elementos pela tag
 const elementosPorTag = document.getElementsByTagName("li")
 console.log(elementosPorTag)
+
+
+// ======================================================================
+
+
+console.log("=== QUERY SELECTOR ===")
+
+// querySelector e querySelectorAll são métodos mais flexíveis para selecionar elementos do DOM usando seletores CSS.
+// querySelector retorna o primeiro elemento que corresponde ao seletor CSS fornecido.
+// querySelectorAll retorna todos os elementos que correspondem ao seletor CSS fornecido, como uma NodeList.
+
+// Selecionar o elemento com o ID
+const guest2 = document.querySelector("#guest-2")
+console.log(guest2)
+
+// Selecionar o primeiro elemento com a classe
+const primeiroGuest = document.querySelector(".guest")
+console.log(primeiroGuest)
+
+// Selecionar todos os elementos com a classe
+const todosGuests = document.querySelectorAll(".guest")
+console.log(todosGuests)
+
+

@@ -67,8 +67,8 @@ user["message"]();
 
 console.log("=== ACESSANDO PROPRIEDADES NO CONTEXTO DO OBJETO ===");
 
-// A palavra reservada this faz referência ao objeto que está executando o código no contexto atual e permite acessar as propriedades e métodos do próprio objeto.
-// Observação: Não funciona arrow function ao usar this.
+// A palavra reservada this faz referência ao objeto que está executando o código no contexto atual e permite acessar as propriedades e métodos do próprio objeto
+// Observação: Não funciona arrow function ao usar this
 
 const user2 = {
     name: "Brenon",
@@ -78,6 +78,31 @@ const user2 = {
 }
 
 user2.message()
+
+
+// ======================================================================
+
+
+console.log("=== ATUALIZANDO UM OBJETO ===");
+
+const product = {
+    name: "Teclado",
+    quantity: 100,
+};
+
+// Acessando o objeto
+console.log(product);
+
+// Atualiza o valor de uma propriedade pela notação de ponto
+product.name = "Mouse";
+product.quantity = 90;
+
+console.log(product);
+
+// Atualiza o valor de uma propriedade pela notação de colchetes
+product["quantity"] = 50;
+
+console.log(product);
 
 
 // ======================================================================

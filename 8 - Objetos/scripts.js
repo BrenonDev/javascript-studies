@@ -106,3 +106,37 @@ console.log(product);
 
 
 // ======================================================================
+
+
+console.log("=== ENCADEAMENTO OPCIONAL ===");
+
+// OPTIONAL CHAINING (?.) encadeamento opcional se a propriedade ou função chamada é nullish (null or undefined), a expressão retorna undefined em vez de gerar um erro.
+// Útil ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
+
+const user3 = {
+    id: 1,
+    name: "Brenon",
+    /*
+    address: {
+        street: "Rua Aurora Torres Cazerta",
+        number: 110,
+        city: "Sorocaba",
+        geo: {
+            latitude: 47.8080,
+            longitude: 17.5674,
+        },
+    },
+    */
+    message: function() {
+        console.log("Hello World!");
+    },
+};
+
+// Acessa propriedades do objeto de forma segura, evitando gerar erros caso a propriedade não exista
+console.log(user3?.address?.street);
+
+// Acessa métodos do objeto de forma segura, evitando gerar erros caso o método não exista
+user.message?.()
+
+
+// ======================================================================

@@ -63,3 +63,21 @@ user["message"]();
 
 
 // ======================================================================
+
+
+console.log("=== ACESSANDO PROPRIEDADES NO CONTEXTO DO OBJETO ===");
+
+// A palavra reservada this faz referência ao objeto que está executando o código no contexto atual e permite acessar as propriedades e métodos do próprio objeto.
+// Observação: Não funciona arrow function ao usar this.
+
+const user2 = {
+    name: "Brenon",
+    message: function () {
+        console.log(`Olá ${this.name}`);
+    },
+}
+
+user2.message()
+
+
+// ======================================================================

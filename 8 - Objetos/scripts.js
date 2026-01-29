@@ -140,3 +140,17 @@ user.message?.()
 
 
 // ======================================================================
+
+
+console.log("=== OPERADOR DE COALESÊNCIA NULA (??) ===")
+
+// O Operador de Coalescência Nula (??) retorna o valor do operando à esquerda se ele não for null ou undefined; caso contrário, retorna o valor do operando à direita.
+
+const config = {
+    host: null,
+    port: 8080,
+}
+const host = config.host ?? "localhost"
+const port = config.port ?? 3000
+console.log("Host: ", host) // "localhost"
+console.log("Port: ", port) // 8080

@@ -154,3 +154,50 @@ const host = config.host ?? "localhost"
 const port = config.port ?? 3000
 console.log("Host: ", host) // "localhost"
 console.log("Port: ", port) // 8080
+
+
+// ======================================================================
+
+
+console.log("=== FUNÇÃO CONSTRUTORA ===");
+
+// Função construtora é uma função especial usada para criar e inicializar objetos. Normalmente, são nomeadas com a primeira letra maiúscula para diferenciá-las de funções comuns.
+
+// Função construtora de objeto Product
+function CreateProduct(name) {
+    const product = {};
+
+    product.name = name;
+    product.details = function() {
+        console.log(`O nome do produto é ${this.name}`);
+    }
+
+    return product;
+}
+
+// Cria instâncias do objeto Product usando a função construtora
+const product1 = new CreateProduct("Teclado");
+
+console.log(product1.name);
+product1.details();
+
+const product2 = new CreateProduct("Mouse");
+
+console.log(product2.name);
+product2.details();
+
+// Forma alternativa de criar uma função construtora usando this, porém o retorno é implícito. Observação: JavaScript recomenda a criação de classes ao invés de funções construtoras dessa forma.
+function CreatePerson(name) {
+    this.name = name;
+    this.message = function() {
+        console.log(`Olá ${this.name}`);
+    }
+}
+
+const person1 = new CreatePerson("Brenon");
+console.log(person1.name);
+person1.message();
+
+// Exemplos de funções construtoras nativas: Date(), Array(), Object(), etc.
+const date = new Date();
+console.log(date);

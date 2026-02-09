@@ -4,3 +4,19 @@ console.log("=== ARRAYS ===");
 
 
 // ======================================================================
+
+
+console.log("=== CRIANDO UM ARRAY COM UM CONSTRUTOR ===");
+
+// Cria um array vazio usando o construtor Array
+const newArray = new Array();
+console.log(newArray);
+console.log(newArray.length);
+
+// Cria um array com um número específico de elementos usando o construtor Array
+const available = new Array(10);
+console.log(available);
+console.log(available.length);
+
+
+// ======================================================================

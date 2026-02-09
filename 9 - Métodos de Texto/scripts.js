@@ -96,3 +96,16 @@ console.log(joinedSentence);
 
 
 // ======================================================================
+
+
+console.log("=== ENCONSTRANDO UM CONTEÚDO NO TEXTO ===");
+
+const message = "Olá, meu nome é Brenon.";
+
+console.log(message.indexOf("Brenon"));
+
+console.log(message.includes("Brenon"));
+
+console.log(message.startsWith("Olá"));
+
+console.log(message.endsWith("Brenon."));

@@ -20,3 +20,28 @@ console.log(available.length);
 
 
 // ======================================================================
+
+
+console.log("=== CRIANDO E ACESSANDO UM ARRAY ===");
+
+// Cria um array usando a notação literal de colchetes
+const fruits = ["apple", "banana", "orange"];
+
+// Exibe o array completo
+console.log(fruits);
+
+// Exibe o tipo do array
+console.log(typeof fruits);
+
+// Exibe o tamanho do array usando a propriedade length
+console.log(fruits.length);
+
+// Acessa elementos do array usando índices
+console.log(fruits[0]);
+console.log(fruits[1]);
+console.log(fruits[2]);
+console.log(fruits[3]); // Acessa um índice que não existe, retorna undefined
+
+// Acessa dinamicamente o último elemento do array usando a propriedade length - 1
+console.log(fruits[fruits.length - 1]);
+

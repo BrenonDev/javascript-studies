@@ -80,3 +80,19 @@ console.log(number.padEnd(10, "#"));
 
 
 // ======================================================================
+
+
+console.log("=== SEPARANDO E UNINDO TEXTOS ===");
+
+const sentence = "JavaScript é uma linguagem de programação.";
+
+// Separa a frase em palavras usando split
+const words = sentence.split(" ");
+console.log(words);
+
+// Une as palavras em uma frase usando join
+const joinedSentence = words.join(" ");
+console.log(joinedSentence);
+
+
+// ======================================================================

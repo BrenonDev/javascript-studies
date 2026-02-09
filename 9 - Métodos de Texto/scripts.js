@@ -20,7 +20,6 @@ const text2 = "JavaScript é incrível!";
 // Obtém o tamanho do texto
 console.log("Tamanho do texto: ", text2.length);
 
-
 const password = "12345";
 
 // Verifica se a senha tem pelo menos 8 caracteres
@@ -39,3 +38,27 @@ console.log(String(value).length);
 // ======================================================================
 
 
+console.log("=== SUBSTITUINDO PARTES DE UM TEXTO ===");
+
+const originalText = "O céu é azul.";
+
+console.log(originalText);
+
+// Substitui "azul" por "cinza" usando replace (texto a ser substituído, novo texto)
+console.log(originalText.replace("azul", "cinza"));
+
+// Extrai uma parte do texto usando slice (início, fim)
+console.log(originalText.slice(2, 5));
+
+// Extrai os últimos 5 caracteres do texto usando slice com índice negativo
+console.log(originalText.slice(-5));
+
+let textWithSpaces = "   Hello World!   ";
+
+console.log(textWithSpaces.length);
+
+// Remove os espaços em branco do início e do fim do texto usando trim
+console.log(textWithSpaces.trim().length);
+
+
+// ======================================================================

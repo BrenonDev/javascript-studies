@@ -62,3 +62,21 @@ console.log(textWithSpaces.trim().length);
 
 
 // ======================================================================
+
+
+console.log("=== COMPLETANDO UM TEXTO ===");
+
+const creditCard = "1234567890123456";
+
+// Exibe os últimos 4 dígitos do cartão de crédito e substitui os números no início por "X" usando slice e padStart
+const maskedCard = creditCard.slice(-4).padStart(creditCard.length, "X");
+
+console.log(maskedCard);
+
+const number = "123";
+
+// Completa o número com "#" até atingir um comprimento total de 10 caracteres usando padEnd
+console.log(number.padEnd(10, "#"));
+
+
+// ======================================================================

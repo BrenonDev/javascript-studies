@@ -144,3 +144,11 @@ console.log(myArray[4].name, myArray[4].age); // Objeto
 
 
 // ======================================================================
+
+
+console.log("=== VERIFICANDO SE UM ELEMENTO EXISTE NO ARRAY ===");
+
+// Verifica se um elemento existe em um array usando o método includes(), que retorna true se o elemento for encontrado e false caso contrário
+const animals = ["cat", "dog", "rabbit"];
+console.log(animals.includes("dog"));
+console.log(animals.includes("hamster"));

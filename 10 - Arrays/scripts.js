@@ -45,3 +45,20 @@ console.log(fruits[3]); // Acessa um índice que não existe, retorna undefined
 // Acessa dinamicamente o último elemento do array usando a propriedade length - 1
 console.log(fruits[fruits.length - 1]);
 
+
+// ======================================================================
+
+
+console.log("=== CONVERTENDO STRING EM ARRAY ===");
+
+// Converte uma string em um array usando o método split()
+const name = "John Doe";
+const nameArray = name.split(" ");
+console.log(nameArray);
+
+// Cria um array de caracteres a partir de uma string usando o método split() com uma string vazia como separador
+const charsArray = name.split("");
+console.log(charsArray);
+
+
+// ======================================================================

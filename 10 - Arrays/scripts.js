@@ -120,3 +120,27 @@ console.log(numbers);
 
 
 // ======================================================================
+
+
+console.log("=== TIPOS DE DADOS EM ARRAYS ===");
+
+// Tipos de dados em arrays podem ser variados, incluindo números, strings, objetos, funções, etc. Em JavaScript, um array pode conter elementos de diferentes tipos de dados ao mesmo tempo. Por exemplo:
+const myArray = [
+    "Hello",
+    42,
+    true,
+    function() { return "This is a function"; },
+    { 
+        name: "Alice", 
+        age: 30
+    }
+]
+
+console.log(myArray[0]); // String
+console.log(myArray[1]); // Número
+console.log(myArray[2]); // Booleano
+console.log(myArray[3]()); // Função
+console.log(myArray[4].name, myArray[4].age); // Objeto
+
+
+// ======================================================================

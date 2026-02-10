@@ -62,3 +62,43 @@ console.log(charsArray);
 
 
 // ======================================================================
+
+
+console.log("=== ADICIONANDO E REMOVENDO UM ITEM DO ARRAY ===");
+
+// Cria um array inicial
+const colors = [];
+console.log(colors);
+
+// Adiciona elementos ao final do array usando o método push()
+colors.push("red");
+colors.push("green");
+colors.push("blue");
+console.log(colors);
+
+// Adiciona elementos ao início do array usando o método unshift()
+colors.unshift("yellow");
+console.log(colors);
+
+// Remove o último elemento do array usando o método pop()
+const lastColor = colors.pop();
+console.log(lastColor);
+console.log(colors);
+
+// Remove o primeiro elemento do array usando o método shift()
+const firstColor = colors.shift();
+console.log(firstColor);
+console.log(colors);
+
+
+// Adiciona elementos em uma posição específica usando o método splice() onde o primeiro parâmetro é o índice de início, o segundo é o número de elementos a serem removidos (0 para não remover nenhum) e os parâmetros seguintes são os elementos a serem adicionados
+colors.splice(1, 0, "purple", "orange");
+console.log(colors);
+
+// Remove elementos em uma posição específica usando o método splice() onde o primeiro parâmetro é o índice de início e o segundo é o número de elementos a serem removidos
+const removedColors = colors.splice(2, 2);
+console.log(removedColors);
+console.log(colors);
+
+
+// ======================================================================

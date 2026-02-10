@@ -91,14 +91,32 @@ console.log(firstColor);
 console.log(colors);
 
 
-// Adiciona elementos em uma posição específica usando o método splice() onde o primeiro parâmetro é o índice de início, o segundo é o número de elementos a serem removidos (0 para não remover nenhum) e os parâmetros seguintes são os elementos a serem adicionados
-colors.splice(1, 0, "purple", "orange");
-console.log(colors);
+// ======================================================================
 
-// Remove elementos em uma posição específica usando o método splice() onde o primeiro parâmetro é o índice de início e o segundo é o número de elementos a serem removidos
-const removedColors = colors.splice(2, 2);
-console.log(removedColors);
-console.log(colors);
+
+console.log("=== USANDO O ÍNDICE ===");
+
+// Cria um array de números
+const numbers = [10, 20, 30, 40, 50];
+console.log(numbers);
+
+// Encontra o índice de um elemento específico usando o método indexOf(), que retorna o índice do primeiro elemento encontrado ou -1 se não for encontrado
+const position1 = numbers.indexOf(30);
+const position2 = numbers.indexOf(60);
+console.log(position1);
+console.log(position2);
+
+// Remove um elemento específico usando o método splice() em conjunto com indexOf() para encontrar o índice do elemento a ser removido. O primeiro parâmetro de splice() é o índice encontrado, o segundo é o número de elementos a serem removidos (1 para remover apenas o elemento encontrado)
+const indexToRemove = numbers.indexOf(20);
+if (indexToRemove !== -1) {
+    numbers.splice(indexToRemove, 1);
+}
+console.log(numbers);
+
+// Adiciona um elemento específico usando o método splice() em conjunto com indexOf() para encontrar o índice do elemento após o qual o novo elemento deve ser adicionado. O primeiro parâmetro de splice() é o índice encontrado + 1 para adicionar após o elemento encontrado, o segundo é 0 para não remover nenhum elemento, e o terceiro é o novo elemento a ser adicionado
+const indexToAdd = numbers.indexOf(30);
+numbers.splice(indexToAdd + 1, 0, 25);
+console.log(numbers);
 
 
 // ======================================================================

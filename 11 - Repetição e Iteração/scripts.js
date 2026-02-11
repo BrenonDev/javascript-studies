@@ -146,3 +146,14 @@ for (let i = 0; i < 10; i++) {
 
 
 // ======================================================================
+
+console.log("=== CONTINUE ===");
+
+// A palavra-chave continue é usada para pular a iteração atual de um loop e continuar com a próxima iteração. Quando o continue é encontrado dentro de um loop, o restante do código dentro do loop para aquela iteração é ignorado, e a execução continua com a próxima iteração.
+
+for (let i = 0; i < 10; i++) {
+    if (i % 2 === 0) {
+        continue; // Pula os números pares
+    }
+    console.log(i); // Imprime apenas os números ímpares
+}

@@ -106,11 +106,42 @@ for (const studant of studants) {
     console.log(studant);
 }
 
-const message = "Hello, World!";
+const message = "Hello World!";
 
 // Usando for...of para iterar sobre os caracteres de uma string
 for (const char of message) {
     console.log(char);
+}
+
+
+// ======================================================================
+
+
+console.log("=== BREAK ===");
+
+// A palavra-chave break é usada para sair imediatamente de um loop, independentemente da condição. Quando o break é encontrado dentro de um loop, a execução do loop é interrompida e o controle é transferido para a próxima linha de código após o loop.
+
+let option = 2;
+
+// Exemplo de uso do break em um switch case
+switch (option) {
+    case 1:
+        console.log("Opção 1 selecionada");
+        break;
+    case 2:
+        console.log("Opção 2 selecionada");
+        break;
+    default:
+        console.log("Opção inválida");
+}
+
+// Exemplo de uso do break em um loop for
+for (let i = 0; i < 10; i++) {
+    if (i === 5) {
+        console.log("Número 5 encontrado, saindo do loop.");
+        break; // Sai do loop quando i é igual a 5
+    }
+    console.log(i);
 }
 
 

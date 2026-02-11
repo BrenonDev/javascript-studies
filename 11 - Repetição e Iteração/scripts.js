@@ -93,3 +93,25 @@ for (const index in colors) {
 
 
 // ======================================================================
+
+
+console.log("=== LOOP FOR...OF ===");
+
+// O loop for...of é usado para iterar sobre os valores de objetos iteráveis, como arrays, strings, mapas, conjuntos, etc. Ele percorre os valores diretamente, sem acessar os índices ou chaves.
+
+const studants = ["Alice", "Bob", "Charlie"];
+
+// Usando for...of para iterar sobre um array
+for (const studant of studants) {
+    console.log(studant);
+}
+
+const message = "Hello, World!";
+
+// Usando for...of para iterar sobre os caracteres de uma string
+for (const char of message) {
+    console.log(char);
+}
+
+
+// ======================================================================

@@ -65,3 +65,31 @@ for (let i = 1; i <= 10; i++) {
 
 
 // ======================================================================
+
+
+console.log("=== LOOP FOR...IN ===");
+
+// O loop for...in é usado para iterar sobre as propriedades enumeráveis de um objeto. Ele percorre as chaves do objeto, permitindo acessar os valores correspondentes.
+
+const person = {
+    name: "Alice",
+    age: 30,
+    city: "New York"
+};
+
+// Usando for...in para iterar sobre as propriedades do objeto person
+for (const key in person) {
+    if (person.hasOwnProperty(key)) { // Verifica se a propriedade é do próprio objeto e não herdada
+        console.log(`${key}: ${person[key]}`);
+    }
+}
+
+const colors = ["red", "green", "blue"];
+
+// Usando for...in para iterar sobre um array (não recomendado, mas possível)
+for (const index in colors) {
+    console.log(`Index: ${index}, Color: ${colors[index]}`);
+}
+
+
+// ======================================================================

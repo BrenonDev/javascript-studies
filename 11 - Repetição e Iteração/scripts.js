@@ -47,3 +47,21 @@ console.log("Contagem finalizada!");
 
 
 // ======================================================================
+
+
+console.log("=== LOOP FOR ===");
+
+// O loop for é uma estrutura de repetição que é frequentemente usada quando o número de iterações é conhecido. Ele consiste em três partes: a inicialização, a condição e a atualização. A inicialização é executada apenas uma vez no início do loop, a condição é verificada antes de cada iteração, e a atualização é executada após cada iteração.
+
+// Sintaxe do loop for:
+// for (variável de controle; condição; incremento/decremento) {
+//     // bloco de código a ser executado
+// }
+
+const tabuada = 7;
+for (let i = 1; i <= 10; i++) {
+    console.log(`${tabuada} x ${i} = ${tabuada * i}`);
+}
+
+
+// ======================================================================

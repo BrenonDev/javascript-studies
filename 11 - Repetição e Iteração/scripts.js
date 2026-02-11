@@ -32,3 +32,18 @@ console.log("=== LOOP INFINITO ===");
 
 
 // ======================================================================
+
+
+console.log("=== LOOP DO...WHILE ===");
+
+// O loop do...while é semelhante ao while, mas a condição é verificada após a execução do bloco de código. Isso significa que o bloco de código será executado pelo menos uma vez, mesmo que a condição seja falsa desde o início.
+
+let count2 = 11;
+do {
+    console.log(count2);
+    count2++;
+} while (count2 < 10);
+console.log("Contagem finalizada!");
+
+
+// ======================================================================

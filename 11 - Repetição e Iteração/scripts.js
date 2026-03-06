@@ -20,6 +20,7 @@ console.log("Contagem finalizada!");
 
 // ======================================================================
 
+
 console.log("=== LOOP INFINITO ===");
 
 // Um loop infinito é um loop que nunca termina porque a condição de parada nunca é satisfeita. Isso pode ocorrer por erro de lógica ou intencionalmente para criar um processo contínuo. É importante ter cuidado ao criar loops infinitos, pois eles podem causar o travamento do programa ou do sistema.

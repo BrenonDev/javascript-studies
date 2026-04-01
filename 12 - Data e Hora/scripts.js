@@ -57,3 +57,45 @@ console.log("Minutos:", date.getMinutes()); // 14
 
 // Segundos (0-59)
 console.log("Segundos:", date.getSeconds()); // 15
+
+// Milissegundos (0-999)
+console.log("Milissegundos:", date.getMilliseconds()); // 0 (não especificado, então é 0)
+
+
+// ======================================================================
+
+
+console.log("=== MODIFICANDO DATA E HORA ===");
+
+let date2 = new Date("2026-03-23T13:14:15");
+
+// Modifica o ano
+date2.setFullYear(2025);
+console.log("Ano Modificado:", date2.getFullYear()); // 2025
+
+// Modifica o mês (0-11)
+date2.setMonth(11);
+console.log("Mês Modificado:", date2.getMonth()); // 11 (dezembro)
+
+// Modifica o dia do mês (1-31)
+date2.setDate(25);
+console.log("Dia do Mês Modificado:", date2.getDate()); // 25
+
+// Modifica a hora (0-23)
+date2.setHours(10);
+console.log("Hora Modificada:", date2.getHours()); // 10
+
+// Modifica os minutos (0-59)
+date2.setMinutes(30);
+console.log("Minutos Modificados:", date2.getMinutes()); // 30
+
+// Modifica os segundos (0-59)
+date2.setSeconds(45);
+console.log("Segundos Modificados:", date2.getSeconds()); // 45
+
+// Modifica os milissegundos (0-999)
+date2.setMilliseconds(500);
+console.log("Milissegundos Modificados:", date2.getMilliseconds()); // 500
+
+
+// ======================================================================

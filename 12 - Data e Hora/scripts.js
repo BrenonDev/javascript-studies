@@ -99,3 +99,26 @@ console.log("Milissegundos Modificados:", date2.getMilliseconds()); // 500
 
 
 // ======================================================================
+
+
+console.log("=== FORMATANDO DATA E HORA ===");
+
+let date3 = new Date("2026-03-01T13:14:15");
+
+// Formata para o dia sempre ter 2 dígitos
+console.log("Dia com 2 dígitos:", String(date3.getDate()).padStart(2, '0')); // 01
+
+// Formata para o mês sempre ter 2 dígitos (lembrando que os meses são zero-indexados, então adicionamos 1)
+console.log("Mês com 2 dígitos:", String(date3.getMonth() + 1).padStart(2, '0')); // 03
+
+// Montando a data e hora no formato DD/MM/YYYY HH:mm:ss
+let year = date3.getFullYear();
+let month = String(date3.getMonth() + 1).padStart(2, '0');
+let day = String(date3.getDate()).padStart(2, '0');
+let hours = String(date3.getHours()).padStart(2, '0');
+let minutes = String(date3.getMinutes()).padStart(2, '0');
+let seconds = String(date3.getSeconds()).padStart(2, '0');
+console.log("Data e Hora no formato DD/MM/YYYY HH:mm:ss:", `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`); // 01/03/2026 13:14:15
+
+
+// ======================================================================

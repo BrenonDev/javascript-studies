@@ -139,3 +139,23 @@ console.log("toTimeString():", date4.toTimeString()); // 13:14:15 GMT-0300 (Hor√
 
 
 // ======================================================================
+
+
+console.log("=== EXIBINDO DATA E HORA FORMATADAS DE ACORDO COM A LOCALIDADE ===");
+
+let date5 = new Date("2026-03-01T13:14:15");
+
+// Exibe apenas a data formatada de acordo com a localidade do navegador
+console.log("Data Formatada (localidade do navegador):", date5.toLocaleDateString()); // Exemplo: 23/03/2026
+
+// Exibe apenas a hora formatada de acordo com a localidade do navegador
+console.log("Hora Formatada (localidade do navegador):", date5.toLocaleTimeString()); // Exemplo: 13:14:15
+
+// Exibe a data e hora formatada para uma localidade espec√≠fica (por exemplo, para os Estados Unidos)
+console.log("Data e Hora Formatada (localidade dos EUA):", date5.toLocaleString('en-US')); // Exemplo: 3/23/2026, 1:14:15 PM
+
+// Exibe a data e hora formatada de acordo com a localidade do navegador
+console.log("Data e Hora Formatada (localidade do navegador):", date5.toLocaleString()); // Exemplo: 23/03/2026 13:14:15
+
+
+// ======================================================================

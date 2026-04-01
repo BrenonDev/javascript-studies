@@ -159,3 +159,44 @@ console.log("Data e Hora Formatada (localidade do navegador):", date5.toLocaleSt
 
 
 // ======================================================================
+
+
+console.log("=== USANDO TOLOCALESTRING() ===");
+
+// Exibe a data e hora formatada para uma localidade específica (por exemplo, para o Brasil) com opções de formatação
+
+// Exibe a versão curta da data (DD/MM/YYYY)
+console.log("Data e Hora Formatada com Opções:", date5.toLocaleString('pt-BR', {
+    dateStyle: 'short',
+}));
+
+// Exibe a versão média da data (1 de mar. de 2026)
+console.log("Data e Hora Formatada com Opções:", date5.toLocaleString('pt-BR', {
+    dateStyle: 'medium',
+}));
+
+// Exibe a versão completa da data (domingo, 1 de março de 2026)
+console.log("Data e Hora Formatada com Opções:", date5.toLocaleString('pt-BR', {
+    dateStyle: 'full',
+}));
+
+// Exibe a data e hora com opções personalizadas (DD/MM/YYYY HH:mm:ss)
+console.log("Data e Hora Formatada com Opções:", date5.toLocaleString('pt-BR', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+}));
+
+let amount = 123.69;
+
+// Exibe o valor formatado como moeda em reais (R$ 123,69)
+console.log("Valor Formatado como Moeda:", amount.toLocaleString('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+})); // R$ 123,69
+
+
+// ======================================================================

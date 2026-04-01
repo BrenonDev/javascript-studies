@@ -122,3 +122,20 @@ console.log("Data e Hora no formato DD/MM/YYYY HH:mm:ss:", `${day}/${month}/${ye
 
 
 // ======================================================================
+
+
+console.log("=== CONVERTENDO UMA DATA PARA STRING ===");
+
+let date4 = new Date("2026-03-23T13:14:15");
+
+// Converte pora String usando toString()
+console.log("toString():", date4.toString()); // Mon Mar 23 2026 13:14:15 GMT-0300 (Horário Padrão de Brasília)
+
+// Converte para String usando toDateString()
+console.log("toDateString():", date4.toDateString()); // Mon Mar 23 2026
+
+// Converte para String usando toTimeString()
+console.log("toTimeString():", date4.toTimeString()); // 13:14:15 GMT-0300 (Horário Padrão de Brasília)
+
+
+// ======================================================================

@@ -200,3 +200,11 @@ console.log("Valor Formatado como Moeda:", amount.toLocaleString('pt-BR', {
 
 
 // ======================================================================
+
+
+console.log("=== FUSO HORÁRIO ===");
+
+// O fuso horário é a diferença de tempo entre um local específico e o Tempo Universal Coordenado (UTC). Ele é representado em horas, podendo ser positivo ou negativo. Por exemplo, o fuso horário de Brasília é UTC-3, o que significa que está 3 horas atrás do UTC. Já o fuso horário de Londres é UTC+0, o que significa que está no mesmo horário do UTC. O fuso horário é importante para garantir que as datas e horas sejam exibidas corretamente para os usuários em diferentes partes do mundo.
+
+// Obtendo o fuso horário do navegador
+console.log("Fuso Horário do Navegador:", Intl.DateTimeFormat().resolvedOptions().timeZone); // Exemplo: America/Sao_Paulo

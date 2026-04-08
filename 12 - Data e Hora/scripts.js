@@ -208,3 +208,24 @@ console.log("=== FUSO HORÁRIO ===");
 
 // Obtendo o fuso horário do navegador
 console.log("Fuso Horário do Navegador:", Intl.DateTimeFormat().resolvedOptions().timeZone); // Exemplo: America/Sao_Paulo
+
+
+// ======================================================================
+
+console.log("=== CONHECENDO O INTL ===");
+
+// O objeto Intl é uma API do JavaScript que fornece funcionalidades para internacionalização, permitindo que os desenvolvedores formatem datas, números e moedas de acordo com as convenções de diferentes localidades. Ele é especialmente útil para criar aplicações que precisam ser adaptadas para usuários em diferentes regiões do mundo, garantindo que as informações sejam apresentadas de forma adequada e compreensível para cada público. O Intl inclui métodos como Intl.DateTimeFormat para formatação de datas e horas, Intl.NumberFormat para formatação de números e Intl.Collator para comparação de strings, entre outros.
+
+const date6 = Intl.DateTimeFormat().resolvedOptions();
+
+console.log(date6);
+
+// Exibe no formato de acordo com a localidade
+console.log(new Intl.DateTimeFormat("pt-BR").format(new Date()));
+console.log(new Intl.DateTimeFormat("en-US").format(new Date()));
+
+// Obtém a diferença de fuso horário em minutos
+console.log("Diferença de Fuso Horário em Minutos:", new Date().getTimezoneOffset()); // Exemplo: -180 (para UTC-3)
+
+
+//  ======================================================================

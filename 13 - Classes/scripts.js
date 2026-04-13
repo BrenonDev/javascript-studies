@@ -11,4 +11,20 @@ console.log("=== APRENDENDO SOBRE CLASSES ===");
 // HERANÇA
 // Uma classe pode herdar propriedades e métodos de outra classe, permitindo a reutilização de código.
 
+
+// ======================================================================
+
+
+console.log("=== CRIANDO UMA CLASSE COM UM MÉTODO CONSTRUTOR ===");
+
+class Person {
+    constructor(name) {
+        console.log("Olá", name);
+        
+    }
+}
+
+const person = new Person("Brenon");
+
+
 // ======================================================================

@@ -48,3 +48,24 @@ console.log(product2.name);
 
 
 // ======================================================================
+
+
+console.log("=== ADICIONANDO MÉTODOS NAS CLASSES ===");
+
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+
+    sendEmail() {
+        console.log("E-mail enviado para", this.name, "no o endereço", this.email);
+        
+    }
+}
+
+const user = new User("Brenon", "brenon@example.com");
+user.sendEmail();
+
+
+// ======================================================================

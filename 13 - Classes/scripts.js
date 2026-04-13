@@ -69,3 +69,26 @@ user.sendEmail();
 
 
 // ======================================================================
+
+
+console.log("=== O QUE É MÉTODO ESTÁTICO? ===");
+
+class User1{
+    showMessage() {
+        console.log("Olá, sou um método de instância!");
+    }
+}
+
+// User1.showMessage(); // Erro: User2.showMessage is not a function
+
+
+class User2 {
+    static showMessage() {
+        console.log("Olá, sou um método estático!");
+    }
+}
+
+User2.showMessage(); // Olá, sou um método estático!
+
+
+// ======================================================================

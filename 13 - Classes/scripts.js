@@ -192,3 +192,35 @@ console.log(userName);
 
 
 // ======================================================================
+
+
+console.log("=== COMO UTILIZAR CLASSES PARA LIDAR COM EXCEÇÕES ===");
+
+// Em JavaScript, você pode usar classes para criar suas próprias exceções personalizadas. Isso é útil para fornecer mensagens de erro mais específicas e para organizar melhor o código de tratamento de erros.
+
+let obj = ["Brenon"];
+index = 300;
+
+try {
+    // obj.execute(); // Isso vai lançar um erro porque obj é um array e não tem o método execute.
+
+    if (!obj.includes("Brenon")) {
+        throw new Error("O nome Brenon não foi encontrado no array."); // Lança uma exceção personalizada se o nome Brenon não estiver presente no array.
+    }
+
+    if (index > 99) {
+        throw new RangeError("O índice está fora dos limites permitidos."); // Lança uma exceção personalizada se o índice estiver fora dos limites.
+    }
+} 
+catch (error) {
+    if (error instanceof TypeError) { // Verifica se o erro é do tipo TypeError, que é o tipo de erro esperado nesse caso.
+        console.log("Ocorreu um erro de tipo:", error.message);
+    } else if (error instanceof RangeError) { // Verifica se o erro é do tipo RangeError, que é o tipo de erro esperado nesse caso.
+        console.log("Ocorreu um erro de intervalo:", error.message);
+    } else {
+        console.log("Ocorreu um erro desconhecido:", error.message);
+    }  
+}
+
+
+// ======================================================================

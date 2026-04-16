@@ -168,3 +168,27 @@ console.log("=== APRENDENDO SOBRE HERANÇA E CADA DE PROTÓTIPOS ===");
 
 
 // ======================================================================
+
+
+console.log("=== CRIANDO UM OBJETO PROTOTYPE ===");
+
+// Em JavaScript, um objeto prototype é um objeto que é usado como um modelo para criar outros objetos. Ele pode conter propriedades e métodos que serão compartilhados por todos os objetos criados a partir dele.
+// O objeto prototype é o mecanismo pelo qual os objetos JavaScript herdam recursos uns dos outros. Por exemplo, o objeto Array tem um prototype que inclui métodos como push, pop, etc. Quando você cria um array, ele herda esses métodos do seu prototype.
+
+const adress = {
+    city: "São Paulo",
+    country: "Brasil"
+};
+
+console.log(adress);
+
+const users = ["Brenon", "Maria", "João"];
+
+console.log(users);
+
+const userName = new String("Brenon");
+
+console.log(userName);
+
+
+// ======================================================================

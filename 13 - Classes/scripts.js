@@ -111,7 +111,7 @@ class Animal {
     }
 
     makeNoise() {
-        console.log("Alguma som genérico do animal."); // Método genérico para fazer um som, que pode ser sobrescrito por subclasses.
+        console.log("Alguma som genérico do animal.");
     }
 }
 
@@ -123,15 +123,28 @@ const dog = new Dog("Rex");
 console.log(dog.name); // A classe Dog herda a propriedade name da classe Animal.
 dog.makeNoise(); // A classe Dog herda o método makeNoise da classe Animal, então ele pode ser chamado mesmo sem ser definido na classe Dog.
 
+
+// ======================================================================
+
+
+console.log("=== SOBRESCREVENDO MÉTODOS ===");
+
+// Sobrescrever métodos é o processo de fornecer uma nova implementação para um método que já existe em uma classe pai. Isso permite que a classe filha tenha um comportamento diferente para esse método.
+
 class Cat extends Animal {
     makeNoise() {
-        console.log("Miau!"); // Sobrescreve o método makeNoise da classe Animal.
+        console.log("Miau!"); // Sobrescreve o método makeNoise da classe Animal para fornecer um comportamento específico para a classe Cat.
+    }
+
+    run() {
+        console.log(this.name, "está correndo!"); // A classe Cat pode ter seus próprios métodos além dos que herda da classe Animal.
     }
 }
 
 const cat = new Cat("Whiskers");
 console.log(cat.name);
 cat.makeNoise();
+cat.run();
 
 
 // ======================================================================

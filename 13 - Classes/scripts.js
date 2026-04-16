@@ -224,3 +224,24 @@ catch (error) {
 
 
 // ======================================================================
+
+
+console.log("=== COMO UTILIZAR CLASSES PARA CRIAR ERROS CUSTOMIZADOS ===");
+
+// Em JavaScript, você pode criar erros personalizados usando classes. Isso é útil para fornecer mensagens de erro mais específicas e para organizar melhor o código de tratamento de erros.
+
+class CustomError {
+    constructor(message) {
+        this.message = "CLASSE DE ERRO CUSTOMIZADA: " + message;
+    }
+}
+
+try {
+    throw new CustomError("Erro personalizado!"); // Lança uma exceção personalizada usando a classe CustomError.
+} catch (error) {
+    if (error instanceof CustomError) {
+        console.log(error.message); // Verifica se o erro é uma instância de CustomError e, em caso afirmativo, exibe a mensagem personalizada.
+    } else {
+        console.log("Não foi possível identificar o erro."); // Caso contrário, exibe uma mensagem genérica para erros desconhecidos.
+    }
+}

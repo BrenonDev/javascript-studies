@@ -1,3 +1,6 @@
+"use strict"; // Ativa o modo estrito (strict mode) no escopo global do arquivo JavaScript. Isso significa que todas as variáveis e funções declaradas neste arquivo estarão sujeitas às regras do modo estrito. O modo estrito é uma funcionalidade do JavaScript que ajuda a escrever um código mais seguro e livre de erros, impondo regras mais rigorosas para a sintaxe e o comportamento do código. Ele pode ser ativado globalmente, como neste caso, ou localmente dentro de uma função. Obrigatório iniciar o modo estrito com a declaração "use strict"; no início do arquivo ou da função para que ele tenha efeito.
+
+
 console.log("=== CONHECENDO O ECMA SCRIPT ===");
 
 // 1995
@@ -18,3 +21,40 @@ console.log("=== CONHECENDO O ECMA SCRIPT ===");
 
 // ======================================================================
 
+console.log("=== CONHECENDO O STRICT MODE ===");
+
+// O modo estrito é uma funcionalidade do JavaScript que ajuda a escrever um código mais seguro e livre de erros.
+
+
+function showMessage() {
+
+  let personName = "John"; // Correção: declarando a variável com 'let'
+  console.log(personName);
+}
+
+showMessage();
+
+class Studant {
+    get point() {
+        return 7;
+    }
+}
+
+let studant = new Studant();
+// console.log(studant.point);
+
+// Tentando atribuir um valor a uma propriedade somente leitura (getter) em modo estrito, o que resultará em um erro, pois não é permitido modificar propriedades que são apenas de leitura.
+// studant.point = 10;
+
+console.log(studant.point);
+
+// Tentando deletar uma propriedade do objeto global 'window' em modo estrito, o que resultará em um erro, pois não é permitido deletar propriedades do objeto global.
+// delete window.document
+
+function sum(a, a, c) {
+    // Em modo estrito, a declaração de parâmetros duplicados em uma função é proibida, o que resultará em um erro de sintaxe.
+    return a + a + c;
+}
+
+const result = sum(1, 3, 2);
+console.log(result); // O resultado será 8, pois o segundo parâmetro 'a' sobrescreve o primeiro, e a função retorna a soma dos valores dos parâmetros.

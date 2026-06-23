@@ -122,3 +122,24 @@ newProduct(product); // Saída: Produto: Smartphone, Preço: 999.99, Marca: Sams
 
 
 // ======================================================================
+
+
+console.log("=== CONHECENDO O REST PARAMS ===");
+
+// O Rest Params (...rest) é uma funcionalidade do JavaScript que permite representar um número indefinido de argumentos como um array. Ele é útil quando você deseja criar funções que podem aceitar um número variável de argumentos, sem precisar definir explicitamente cada parâmetro.
+
+function values(...rest) {
+    // Mostra a quantidade de argumentos passados para a função, que é armazenada no array 'rest'.
+    console.log(rest.length);
+
+    // Exibe o conteúdo do array 'rest' usando o operador de espalhamento (spread operator) para mostrar cada elemento individualmente.
+    console.log(...rest);
+
+    // Exibe o conteúdo do array 'rest' como um array completo.
+    console.log(rest);
+}
+
+values(1, 2, 3, 4, 5); // Saída: 5, 1 2 3 4 5, [1, 2, 3, 4, 5]
+
+
+// ======================================================================

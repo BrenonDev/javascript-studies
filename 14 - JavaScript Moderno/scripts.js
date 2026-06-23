@@ -19,7 +19,9 @@ console.log("=== CONHECENDO O ECMA SCRIPT ===");
 //É dessa especificação que veio siglas como: ECMAScript 2023, ES2023 ou ES14.
 // https://ecma-international.org/
 
+
 // ======================================================================
+
 
 console.log("=== CONHECENDO O STRICT MODE ===");
 
@@ -51,10 +53,42 @@ console.log(studant.point);
 // Tentando deletar uma propriedade do objeto global 'window' em modo estrito, o que resultará em um erro, pois não é permitido deletar propriedades do objeto global.
 // delete window.document
 
-function sum(a, a, c) {
-    // Em modo estrito, a declaração de parâmetros duplicados em uma função é proibida, o que resultará em um erro de sintaxe.
-    return a + a + c;
-}
+// function sum(a, a, c) {
+//     // Em modo estrito, a declaração de parâmetros duplicados em uma função é proibida, o que resultará em um erro de sintaxe.
+//     return a + a + c;
+// }
 
-const result = sum(1, 3, 2);
-console.log(result); // O resultado será 8, pois o segundo parâmetro 'a' sobrescreve o primeiro, e a função retorna a soma dos valores dos parâmetros.
+// const result = sum(1, 3, 2); // Tentando chamar a função 'sum' com parâmetros duplicados, o que resultará em um erro de sintaxe em modo estrito.
+// console.log(result); // O resultado será 8, pois o segundo parâmetro 'a' sobrescreve o primeiro, e a função retorna a soma dos valores dos parâmetros.
+
+
+// ======================================================================
+
+
+console.log("=== DESESTRUTURAÇÃO DE ARRAYS ===");
+
+// destructuring (desestruturação) é uma funcionalidade do JavaScript que permite extrair valores de arrays ou propriedades de objetos e atribuí-los a variáveis de forma mais concisa e legível.
+
+const numbers = [1, 2, 3, 4, 5];
+
+// Desestruturação de arrays
+const [first, second, third] = numbers;
+
+console.log(first); // Saída: 1
+console.log(second); // Saída: 2
+console.log(third); // Saída: 3
+
+// Desetruturar somente o primeiro
+const [firstNumber] = numbers;
+console.log(firstNumber); // Saída: 1
+
+// Ignorando o primeiro elemento e desestruturando o segundo
+const [_, secondNumber] = numbers;
+console.log(secondNumber); // Saída: 2
+
+// Ignorando os dois primeiros elementos e desestruturando o terceiro
+const [,,thirdNumber] = numbers;
+console.log(thirdNumber); // Saída: 3
+
+
+// ======================================================================

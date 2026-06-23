@@ -67,7 +67,7 @@ console.log(studant.point);
 
 console.log("=== DESESTRUTURAÇÃO DE ARRAYS ===");
 
-// destructuring (desestruturação) é uma funcionalidade do JavaScript que permite extrair valores de arrays ou propriedades de objetos e atribuí-los a variáveis de forma mais concisa e legível.
+// destructuring assignment (desestruturação) é uma funcionalidade do JavaScript que permite extrair valores de arrays ou propriedades de objetos e atribuí-los a variáveis de forma mais concisa e legível.
 
 const numbers = [1, 2, 3, 4, 5];
 
@@ -89,6 +89,36 @@ console.log(secondNumber); // Saída: 2
 // Ignorando os dois primeiros elementos e desestruturando o terceiro
 const [,,thirdNumber] = numbers;
 console.log(thirdNumber); // Saída: 3
+
+
+// ======================================================================
+
+
+console.log("=== DESESTRUTURAÇÃO DE OBJETOS ===");
+
+// destructuring assignment (desestruturação) também pode ser aplicada a objetos, permitindo extrair propriedades de objetos e atribuí-las a variáveis de forma mais concisa e legível.
+
+const product = {
+    name: "Smartphone",
+    price: 999.99,
+    brand: "Samsung"
+};
+
+// Desestruturação de objetos
+const { name, price, brand } = product;
+
+console.log(name); // Saída: Smartphone
+console.log(price); // Saída: 999.99
+console.log(brand); // Saída: Samsung
+
+// Desestruturando e renomeando as variáveis
+const { name: productName, price: productPrice, brand: productBrand } = product;
+
+function newProduct({ name, price, brand }) {
+    console.log(`Produto: ${name}, Preço: ${price}, Marca: ${brand}`);
+}
+
+newProduct(product); // Saída: Produto: Smartphone, Preço: 999.99, Marca: Samsung
 
 
 // ======================================================================

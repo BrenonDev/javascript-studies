@@ -166,6 +166,3 @@ const data = [
 
 console.log(data); // Saída: (3) [{…}, {…}, {…}]
 console.log(...data); // Saída: { name: "John", age: 30 } { name: "Jane", age: 25 } { name: "Bob", age: 35 }
-
-
-// ======================================================================

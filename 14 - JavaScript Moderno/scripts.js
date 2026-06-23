@@ -143,3 +143,29 @@ values(1, 2, 3, 4, 5); // Saída: 5, 1 2 3 4 5, [1, 2, 3, 4, 5]
 
 
 // ======================================================================
+
+
+console.log("=== CONHECENDO O SPREAD OPERATOR ===");
+
+// O Spread Operator (...) é uma funcionalidade do JavaScript que permite expandir elementos de um array ou objeto em locais onde zero ou mais argumentos (para chamadas de função) ou elementos (para arrays literais) são esperados. Ele é útil para copiar, combinar ou espalhar elementos de arrays e objetos de forma concisa.
+
+const numbersSpread = [1, 2, 3];
+
+// Usando o Spread Operator para exibir os elementos do array 'numbers' individualmente
+console.log(...numbersSpread); // Saída: 1 2 3
+
+// Usando o Spread Operator para criar um novo array com elementos adicionais
+const newNumbers = [...numbersSpread, 4, 5];
+console.log(newNumbers); // Saída: [1, 2, 3, 4, 5]
+
+const data = [
+    { name: "John", age: 30 },
+    { name: "Jane", age: 25 },
+    { name: "Bob", age: 35 }
+];
+
+console.log(data); // Saída: (3) [{…}, {…}, {…}]
+console.log(...data); // Saída: { name: "John", age: 30 } { name: "Jane", age: 25 } { name: "Bob", age: 35 }
+
+
+// ======================================================================

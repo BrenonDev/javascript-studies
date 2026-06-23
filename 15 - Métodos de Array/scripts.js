@@ -27,3 +27,27 @@ console.log(formatted); // Saída: [{ id: ..., description: "Smartphone" }, { id
 
 // ======================================================================
 
+
+console.log("=== MÉTODO FILTER ===");
+
+// O método filter() é uma função de array que cria um novo array com todos os elementos que passam em um teste implementado por uma função fornecida.
+
+const words = ["JavaScript", "Python", "Java", "C++", "Ruby"];
+
+// Filtrando palavras com mais de 4 letras
+const longWords = words.filter((word) => word.length > 4);
+
+console.log(longWords); // Saída: ["JavaScript", "Python"]
+
+const productsFilter = [
+    { name: "Smartphone", price: 999.99, promotion: true },
+    { name: "Notebook", price: 1999.99, promotion: false },
+    { name: "Tablet", price: 499.99, promotion: true }
+];
+// Filtrando produtos em promoção
+const promotion = productsFilter.filter((product) => product.promotion === true);
+
+console.log(promotion); // Saída: [{ name: "Smartphone", price: 999.99, promotion: true }, { name: "Tablet", price: 499.99, promotion: true }]
+
+
+// ======================================================================

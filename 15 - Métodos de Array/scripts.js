@@ -74,3 +74,34 @@ console.log(notFoundIndex); // Saída: -1 (nenhum número maior que 100 foi enco
 
 
 // ======================================================================
+
+
+console.log("=== MÉTODO FIND ===");
+
+// O método find() é uma função de array que retorna o valor do primeiro elemento que satisfaz a função de teste fornecida. Caso nenhum elemento satisfaça a função, ele retorna undefined.
+
+// Encontrando o primeiro número maior que 25
+const foundNumber = numbers.find((number) => number > 25);
+
+// Exibe o valor encontrado
+console.log(foundNumber); // Saída: 30
+
+// Exemplo com objetos
+const fruits = [
+    { name: "Apple", color: "Red" },
+    { name: "Banana", color: "Yellow" },
+    { name: "Grapes", color: "Green" }
+];
+
+// Encontrando a primeira fruta com cor amarela
+const yellowFruit = fruits.find((fruit) => fruit.color === "Yellow");
+
+// Exibe a fruta encontrada
+console.log(yellowFruit.name); // Saída: "Banana"
+
+// Valor não encontrado
+const notFoundFruit = fruits.find((fruit) => fruit.color === "Blue");
+console.log(notFoundFruit); // Saída: undefined (nenhuma fruta com cor azul foi encontrada)
+
+
+// ======================================================================

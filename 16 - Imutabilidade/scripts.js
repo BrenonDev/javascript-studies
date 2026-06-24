@@ -1,27 +1,29 @@
 console.log("=== CONHECENDO SOBRE IMUTABILIDADE ===");
 
+// CONCEITO
+
 // Uma vez algo imutável é criado você não pode modificar seus valores ou propriedades. Em vez disso, você cria uma cópia modificada para manter o original inalterado.
 
 // Atribuição por referência significa que quando você atribui um objeto a outro, ambos apontam para o mesmo local na memória. Portanto, se você modificar uma propriedade do objeto atribuído, isso afetará o objeto original.
 
 // EXEMPLO
 
-const address1 = {
-  street: "Rua A",
-  number: 123,
-}
+// const address1 = {
+//   street: "Rua A",
+//   number: 123,
+// }
 
-const address2 = address1; // Atribuição por referência
+// const address2 = address1; // Atribuição por referência
 
-console.log("Endereço 1:", address1.street); // Rua A
-console.log("Endereço 2:", address2.street); // Rua A
+// console.log("Endereço 1:", address1.street); // Rua A
+// console.log("Endereço 2:", address2.street); // Rua A
 
-address2.street = "Rua B"; 
+// address2.street = "Rua B"; 
 
-console.log("Após somente a modificação do endereço 2:");
+// console.log("Após somente a modificação do endereço 2:");
 
-console.log("Endereço 1:", address1.street); // Rua B
-console.log("Endereço 2:", address2.street); // Rua B
+// console.log("Endereço 1:", address1.street); // Rua B
+// console.log("Endereço 2:", address2.street); // Rua B
 
 // ESTRATÉGIA
 
@@ -43,3 +45,54 @@ console.log("Endereço 2:", address2.street); // Rua B
 
 
 // ======================================================================
+
+
+console.log("=== APLICANDO IMUTABILIDADE ===");
+
+// Atribuição por referência significa que quando você atribui um objeto a outro, ambos apontam para o mesmo local na memória. Portanto, se você modificar uma propriedade do objeto atribuído, isso afetará o objeto original.
+
+// Exemplo de atribuição por referência de Objeto
+
+const address1 = {
+  street: "Rua A",
+  number: 123,
+}
+
+const address2 = address1; // Isso não é uma cópia, é uma atribuição por referência. Portanto, address1 e address2 apontam para o mesmo objeto na memória.
+
+console.log("Endereço 1:", address1.street); // Rua A
+console.log("Endereço 2:", address2.street); // Rua A
+
+address2.street = "Rua B"; 
+
+console.log("Após a modificação do endereço 2:");
+
+console.log("Endereço 1:", address1.street); // Rua B
+console.log("Endereço 2:", address2.street); // Rua B
+
+// Já a imutabilidade, você cria uma cópia de um objeto para modificar seus valores e mantém o objeto original imutável
+
+// Exemplo de imutabilidade de objeto
+
+console.log("Após a criação de uma cópia do endereço 1, modificando o endereço 3 não afeta o endereço 1:");
+
+// const address3 = { ...address1 };
+const address3 = { ...address1, number: 777 }; // Cria o novo objeto com o valor de uma propridade já alterada
+
+address3.street = "Rua C"; // ALtera o valor de um propriedade do novo objeto
+
+console.log("Endereço 1:", address1.street); // Rua B
+console.log("N° do endereço 1:", address1.number); // Rua B
+console.log("Endereço 3:", address3.street); // Rua C
+console.log("N° do endereço 3:", address3.number); // Rua C
+
+// Exemplo de atribuição por referência de Array
+
+const list1 = [1, 2, 3];
+
+const list2 = [ ...list1, 4] // Cria o novo array com um valor adicionado
+
+list2.push(5); // Adiciona um valor do novo array
+
+console.log(list1);
+console.log(list2);

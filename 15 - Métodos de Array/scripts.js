@@ -105,3 +105,21 @@ console.log(notFoundFruit); // Saída: undefined (nenhuma fruta com cor azul foi
 
 
 // ======================================================================
+
+
+console.log("=== MÉTODO EVERY ===");
+
+// O método every() é uma função de array que testa se todos os elementos do array passam em um teste implementado por uma função fornecida. Ele retorna true se todos os elementos passarem no teste, caso contrário, retorna false.
+
+const ages = [18, 22, 30, 25];
+
+// Verificando se todos os elementos são maiores ou iguais a 18
+const allAdults = ages.every((age) => age >= 18);
+console.log(allAdults); // Saída: true
+
+// Verificando se todos os elementos são menores que 30
+const allUnder30 = ages.every((age) => age < 30);
+console.log(allUnder30); // Saída: false (nem todos os elementos são menores que 30)
+
+
+// ======================================================================

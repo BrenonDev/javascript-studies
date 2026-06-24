@@ -51,3 +51,26 @@ console.log(promotion); // Saída: [{ name: "Smartphone", price: 999.99, promoti
 
 
 // ======================================================================
+
+
+console.log("=== MÉTODO FIND INDEX ===");
+
+// O método findIndex() é uma função de array que retorna o índice do primeiro elemento que satisfaz a função de teste fornecida. Caso nenhum elemento satisfaça a função, ele retorna -1.
+
+const numbers = [10, 20, 30, 40, 50];
+
+// Encontrando o índice do primeiro número maior que 25
+const index = numbers.findIndex((number) => number > 25);
+
+// Exibe o índice encontrado
+console.log(index); // Saída: 2 (índice do número 30)
+
+// Exibe o valor do índice encontrado
+console.log(numbers[index]); // Saída: 30
+
+// Valor não encontrado
+const notFoundIndex = numbers.findIndex((number) => number > 100);
+console.log(notFoundIndex); // Saída: -1 (nenhum número maior que 100 foi encontrado)
+
+
+// ======================================================================

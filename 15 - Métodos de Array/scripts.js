@@ -123,3 +123,21 @@ console.log(allUnder30); // Saída: false (nem todos os elementos são menores q
 
 
 // ======================================================================
+
+
+console.log("=== MÉTODO SOME ===");
+
+// O método some() é uma função de array que testa se pelo menos um elemento do array passa em um teste implementado por uma função fornecida. Ele retorna true se pelo menos um elemento passar no teste, caso contrário, retorna false.
+
+const numbersSome = [1, 2, 3, 4, 5];
+
+// Verificando se pelo menos um elemento é maior que 3
+const hasGreaterThanThree = numbersSome.some((number) => number > 3);
+console.log(hasGreaterThanThree); // Saída: true (existem elementos maiores que 3)
+
+// Verificando se pelo menos um elemento é menor que 0
+const hasLessThanZero = numbersSome.some((number) => number < 0);
+console.log(hasLessThanZero); // Saída: false (não existem elementos menores que 0)
+
+
+// ======================================================================

@@ -141,3 +141,33 @@ console.log(hasLessThanZero); // Saída: false (não existem elementos menores q
 
 
 // ======================================================================
+
+
+console.log("=== MÉTODO REDUCE ===");
+
+// O método reduce() é uma função de array que aplica uma função a um acumulador e a cada elemento do array (da esquerda para a direita) para reduzi-lo a um único valor.
+
+/*
+Parâmetros:
+- Array original (values): O array sobre o qual reduce() foi chamado.
+- Acumulador (accumulator): O valor acumulado retornado na última execução do callback, ou o valor inicial fornecido.
+- Valor atual (currentValue): O elemento atual sendo processado no array.
+- Índice atual (currentIndex, opcional): O índice do elemento atual sendo processado no array.
+- Array original (originalArray, opcional): O array original sobre o qual reduce() foi chamado.
+- Valor inicial (initialValue, opcional): Valor a ser usado como o primeiro argumento do primeiro chamado da função callback. Se não for fornecido, o primeiro elemento do array será usado como valor inicial e o índice atual começará em 1.
+*/
+
+const values = [1, 2, 3, 4, 5];
+
+const sum = values.reduce((accumulator, currentValue, currentIndex, originalArray) => {
+    console.log(`Acumulador: ${accumulator}`); // Exibe o valor do acumulador
+    console.log(`Valor atual: ${currentValue}`); // Exibe o valor atual do array
+    console.log(`Índice atual: ${currentIndex}`); // Exibe o índice atual
+    console.log(`Array original: ${originalArray}`); // Exibe o array original
+    console.log('-------------------------');
+
+    return accumulator + currentValue; // Soma o acumulador com o valor atual
+
+}, 0); // Valor inicial (initialValue) do acumulador é 0
+
+console.log(`Soma dos valores: ${sum}`); // Saída: 15 (1 + 2 + 3 + 4 + 5 = 15)

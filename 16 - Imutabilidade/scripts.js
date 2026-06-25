@@ -128,7 +128,7 @@ console.log(Course1, Course3);
 
 console.log("=== SHALLOW FREEZING ===");
 
-const book = {
+const book1 = {
   title: "Objetos Imutáveis",
   category: "JavaScript",
   author: {
@@ -138,17 +138,59 @@ const book = {
 };
 
 // O JavaScript em si não impõe restrições à modificação dos objetos.
-book.category = "HTML"
-console.log(book);
+book1.category = "HTML"
+console.log(book1);
 
 // Congela o objeto e impede a modificação
-Object.freeze(book);
-book.category = "CSS"
-console.log(book);
+Object.freeze(book1);
+book1.category = "CSS"
+console.log(book1);
 
 // O Object.freeze() não impede modificações profundas em objetos aninhados
-book.author.name = "Maria"
-console.log(book);
+book1.author.name = "Maria"
+console.log(book1);
+
+
+// ======================================================================
+
+
+console.log("=== DEEP FREEZE ===");
+
+const book2 = {
+  title: "Objetos Imutáveis",
+  category: "JavaScript",
+  author: {
+    name: "Joao",
+    email: "exemplo@email.com",
+  },
+};
+
+function deepFreeze(object){
+  const props = Reflect.ownKeys(object);
+  
+  // Itera sobre todas as propriedades do objeto
+  for (const prop of props) {
+    // Obtém o valor associado a propriedade atual
+    const value = object[prop];
+
+    // Verifica se o valor é um objeto ou função para continuar aplicando o Deep Freeze em objetos aninhados
+    if (value && typeof value === "object" || typeof value === "function") {
+      // Object.freeze(value)
+      deepFreeze(value)
+      
+    };
+  }
+  // Retorna o objeto congelado
+  return Object.freeze(object)
+};
+
+// Chama a função para congelar o objeto com Deep Freeze (congelamento profundo) 
+deepFreeze(book2)
+
+book2.category = "HTML";
+book2.author.name = "Maria";
+
+console.log(book2);
 
 
 // ======================================================================

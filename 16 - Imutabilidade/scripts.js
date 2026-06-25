@@ -6,25 +6,6 @@ console.log("=== CONHECENDO SOBRE IMUTABILIDADE ===");
 
 // Atribuição por referência significa que quando você atribui um objeto a outro, ambos apontam para o mesmo local na memória. Portanto, se você modificar uma propriedade do objeto atribuído, isso afetará o objeto original.
 
-// EXEMPLO
-
-// const address1 = {
-//   street: "Rua A",
-//   number: 123,
-// }
-
-// const address2 = address1; // Atribuição por referência
-
-// console.log("Endereço 1:", address1.street); // Rua A
-// console.log("Endereço 2:", address2.street); // Rua A
-
-// address2.street = "Rua B"; 
-
-// console.log("Após somente a modificação do endereço 2:");
-
-// console.log("Endereço 1:", address1.street); // Rua B
-// console.log("Endereço 2:", address2.street); // Rua B
-
 // ESTRATÉGIA
 
 // Geralmente há duas maneiras de alterar dados.
@@ -56,7 +37,7 @@ console.log("=== APLICANDO IMUTABILIDADE ===");
 const address1 = {
   street: "Rua A",
   number: 123,
-}
+};
 
 const address2 = address1; // Isso não é uma cópia, é uma atribuição por referência. Portanto, address1 e address2 apontam para o mesmo objeto na memória.
 
@@ -90,9 +71,57 @@ console.log("N° do endereço 3:", address3.number); // Rua C
 
 const list1 = [1, 2, 3];
 
-const list2 = [ ...list1, 4] // Cria o novo array com um valor adicionado
+const list2 = [ ...list1, 4]; // Cria o novo array com um valor adicionado
 
 list2.push(5); // Adiciona um valor do novo array
 
 console.log(list1);
 console.log(list2);
+
+
+// ======================================================================
+
+
+console.log("=== SHALLOW COPY E DEEP COPY ===");
+
+
+// Shallow Copy (cópia superficial): não pega itens aninhados.
+const Course1 = {
+  name: "HTML",
+  students: [
+    {
+      name: "João",
+    }
+  ],
+};
+
+const Course2 = {
+  ...Course1,
+  name: "CSS",
+};
+
+// Vai modificar o studants do Course1 também, porque studants é uma referência e não uma cópia
+Course2.students.push({name: "Maria"})
+
+console.log("Criou 2 cursos com estudantes vinculados:");
+
+console.log(Course1, Course2);
+
+// Deep Copy (cópia profunda): cria uma cópia dos itens aninhados.
+const Course3 = {
+  ...Course1,
+  name: "JavaScript",
+  students: [
+    ...Course1.students,
+    {
+      name: "José",
+    }
+  ]
+}
+
+console.log("Criou 2 cursos com estudantes diferentes:");
+
+console.log(Course1, Course3);
+
+
+// ======================================================================

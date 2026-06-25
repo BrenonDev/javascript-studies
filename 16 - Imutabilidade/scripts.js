@@ -194,3 +194,32 @@ console.log(book2);
 
 
 // ======================================================================
+
+
+console.log("=== MANIPULANDO OBJETOS IMUTÁVEIS ===");
+
+const book3 = {
+  title: "Objetos Imutáveis",
+  category: "JavaScript",
+  author: {
+    name: "Joao",
+    email: "exemplo@email.com",
+  },
+};
+
+const updatedBook = {
+  ...book3,
+  title: "Criando um front-end moderno com HTML", // Atualizando o título
+  category: "HTML", // Atualizando a categoria
+  type: "Programming", // Criando uma nova propriedade
+}
+
+// Objeto intacto
+console.log(book3);
+
+// Objeto modificado
+console.log(updatedBook);
+
+// Utilizando operador de desestruturação (rest operator) para remover propriedades
+const {category, ...bookWithoutCategory} = book3;
+console.log(bookWithoutCategory);

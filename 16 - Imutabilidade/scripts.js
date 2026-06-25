@@ -84,8 +84,7 @@ console.log(list2);
 
 console.log("=== SHALLOW COPY E DEEP COPY ===");
 
-
-// Shallow Copy (cópia superficial): não pega itens aninhados.
+// Shallow Copy (cópia superficial): não pega itens aninhados
 const Course1 = {
   name: "HTML",
   students: [
@@ -107,7 +106,7 @@ console.log("Criou 2 cursos com estudantes vinculados:");
 
 console.log(Course1, Course2);
 
-// Deep Copy (cópia profunda): cria uma cópia dos itens aninhados.
+// Deep Copy (cópia profunda): cria uma cópia dos itens aninhados
 const Course3 = {
   ...Course1,
   name: "JavaScript",
@@ -122,6 +121,34 @@ const Course3 = {
 console.log("Criou 2 cursos com estudantes diferentes:");
 
 console.log(Course1, Course3);
+
+
+// ======================================================================
+
+
+console.log("=== SHALLOW FREEZING ===");
+
+const book = {
+  title: "Objetos Imutáveis",
+  category: "JavaScript",
+  author: {
+    name: "Joao",
+    email: "exemplo@email.com",
+  },
+};
+
+// O JavaScript em si não impõe restrições à modificação dos objetos.
+book.category = "HTML"
+console.log(book);
+
+// Congela o objeto e impede a modificação
+Object.freeze(book);
+book.category = "CSS"
+console.log(book);
+
+// O Object.freeze() não impede modificações profundas em objetos aninhados
+book.author.name = "Maria"
+console.log(book);
 
 
 // ======================================================================

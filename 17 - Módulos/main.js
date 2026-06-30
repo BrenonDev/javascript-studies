@@ -28,10 +28,10 @@ console.log("=== CRIANDO MÓDULOS ===");
 
 // 3. Importando as funções individualmente para o novo arquivo JavaScript e chamando as funções
 
-import { sum, multiply } from "./calc.js";
+// import { sum, multiply } from "./calc.js";
 
-console.log("5 + 2 = " + sum(5, 2));
-console.log("5 x 2 = " + multiply(5, 2));
+// console.log("5 + 2 = " + sum(5, 2)); // 7
+// console.log("5 x 2 = " + multiply(5, 2)); // 10
 
 
 // ======================================================================
@@ -39,10 +39,34 @@ console.log("5 x 2 = " + multiply(5, 2));
 
 console.log("=== IMPORTANDO TUDO ===");
 
-import * as calc from "./calc.js";
+// import * as calc from "./calc.js";
 
-console.log("5 + 2 = " + calc.sum(5, 2));
-console.log("5 x 2 = " + calc.multiply(5, 2));
+// console.log("5 + 2 = " + calc.sum(5, 2)); // 7
+// console.log("5 x 2 = " + calc.multiply(5, 2)); // 10
+
+
+// ======================================================================
+
+
+console.log("=== EXPORTAÇÃO PADRÃO OU NOMEADA ===");
+
+// Exportação padrão, transforma a função na chamada principal do módulo
+// export default function sum(a, b) {
+//     return a + b
+// };
+
+// Importando através da exportação padrão
+// import defaultFunction from "./calc.js";
+// console.log(defaultFunction(10, 10)); // 20
+
+// Exportação nomeada, permite chamar as funções individualmente
+// export function multiply(a, b) {
+//     return a * b
+// };
+
+// Importando através da exportação nomeada
+// import { multiply } from "./calc.js";
+// console.log("5 + 2 = " + sum(5, 2)); // 7
 
 
 // ======================================================================

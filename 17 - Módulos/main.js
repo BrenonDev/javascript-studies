@@ -70,3 +70,17 @@ console.log("=== EXPORTAÇÃO PADRÃO OU NOMEADA ===");
 
 
 // ======================================================================
+
+
+console.log("=== RENOMEANDO AS EXPORTAÇÕES ===");
+
+// Renomeando as exportações
+// export { sum as sumTwoNumbers, multiply as multiplyTwoNumbers }
+
+// Importando as exportações renomeadas
+// import { sumTwoNumbers, multiplyTwoNumbers } from "./calc.js";
+// console.log("5 + 2 = " + sumTwoNumbers(5, 2)); // 7
+// console.log("5 x 2 = " + multiplyTwoNumbers(5, 2)); // 10
+
+
+// ======================================================================

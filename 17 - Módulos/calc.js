@@ -10,3 +10,6 @@ export function multiply(a, b) {
 
 // Alternativa para exportar tudo no final
 // export { sum, multiply }
+
+// Renomeando as exportações
+// export { sum as sumTwoNumbers, multiply as multiplyTwoNumbers }

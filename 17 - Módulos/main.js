@@ -84,3 +84,16 @@ console.log("=== RENOMEANDO AS EXPORTAÇÕES ===");
 
 
 // ======================================================================
+
+
+console.log("=== RENOMEANDO AS IMPORTAÇÕES ===");
+
+// Renomeando as importações
+import { multiply as mult } from "./calc.js";
+console.log("5 x 2 = " + mult(5, 2)); // 10
+
+// Útil para renomear as importações de funções que tem nomes que já estão sendo utilizados
+
+
+// ======================================================================
+

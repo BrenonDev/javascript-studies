@@ -89,11 +89,33 @@ console.log("=== RENOMEANDO AS EXPORTAÇÕES ===");
 console.log("=== RENOMEANDO AS IMPORTAÇÕES ===");
 
 // Renomeando as importações
-import { multiply as mult } from "./calc.js";
-console.log("5 x 2 = " + mult(5, 2)); // 10
+// import { multiply as mult } from "./calc.js";
+// console.log("5 x 2 = " + mult(5, 2)); // 10
 
 // Útil para renomear as importações de funções que tem nomes que já estão sendo utilizados
 
 
 // ======================================================================
 
+
+console.log("=== USANDO CLASSES NOS MÓDULOS ===");
+
+// Exportando uma classe com seus métodos
+// export class Calc {
+//     sum(a, b) {
+//         return a + b
+//     };
+//     multiply(a, b) {
+//         return a * b
+//     };
+// }
+
+// Importando a classe
+// import { Calc } from "./calc.js";
+
+// Instância da classe
+// const calc = new Calc();
+
+// Chamando os métodos da classe
+// console.log("5 + 2 = " + calc.sum(5, 2)); // 7
+// console.log("5 x 2 = " + calc.multiply(5, 2)); // 10

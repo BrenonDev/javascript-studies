@@ -1,3 +1,13 @@
+// Exportando uma classe e seus métodos
+export class Calc {
+    sum(a, b) {
+        return a + b
+    };
+    multiply(a, b) {
+        return a * b
+    };
+};
+
 // default export - é a função padrão fornecida pelo módulo
 export default function sum(a, b) {
     return a + b

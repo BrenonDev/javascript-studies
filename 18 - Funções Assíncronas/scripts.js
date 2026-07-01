@@ -40,3 +40,37 @@ console.log("=== CONHECENDO FUNÇÕES ASSÍNCRONAS ===");
 
 
 // ======================================================================
+
+
+console.log("=== CONHECENDO PROMISES ===");
+
+// Função que retorna uma Promise
+
+function AsyncFunction() {
+  return new Promise((resolve, reject) => {
+    // Simula uma operação assíncrona
+    setTimeout(() => {
+      const isSuccess = false;
+
+      if (isSuccess) {
+        resolve("A operação foi concluída com sucesso!")
+      } else {
+        reject("Algo deu errado")
+      };
+    }, 3000) // Simula uma operação que leva 3 segundos
+  });
+};
+
+// Visualizando que o retorno é uma Promise, mas não espera o resultado da função assíncrona, apenas retorna a Promise
+// console.log(AsyncFunction());
+
+AsyncFunction().then((response) => { // then() é chamado quando a Promise é resolvida independente do te
+  console.log("Sucesso:", response);
+}).catch((error) => { // catch() é chamado quando a Promise é rejeitada
+  console.log("Erro:", error);
+}).finally(() => { // finally() é chamado quando a Promise é resolvida ou rejeitada
+  console.log("Fim da execução.");
+});
+
+
+// ======================================================================

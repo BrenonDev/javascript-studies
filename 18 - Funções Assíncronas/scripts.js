@@ -206,3 +206,27 @@ console.log("=== CONHECENDO O EVENT LOOP ===");
 
 
 // ======================================================================
+
+
+console.log("=== PRIORIDADE E ORDEM DE EXECUÇÃO ===");
+
+// (ORDEM: 1) Executa o código de forma síncrona e o valor 1 é impresso imediatamente no console
+console.log("IDENTIFICAÇÃO:", 1);
+
+// (ORDEM: 3) Microtasks são executadas antes de temporizadores e promessas
+queueMicrotask(() => {
+    console.log("IDENTIFICAÇÃO:", 2);
+});
+
+// (ORDEM: 5) Macrotask que aguarda o evento de temporizador ser acionado
+setTimeout(() => {
+    console.log("IDENTIFICAÇÃO:", 3);
+}, 0);
+
+// (ORDEM: 2) Execução síncrona
+console.log("IDENTIFICAÇÃO:", 4);
+
+// (ORDEM: 4) Adiciona uma microtask
+Promise.resolve(true).then(() => {
+    console.log("IDENTIFICAÇÃO:", 5);
+});

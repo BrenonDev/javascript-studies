@@ -35,8 +35,8 @@ console.log("=== APLICANDO IMUTABILIDADE ===");
 // Exemplo de atribuição por referência de Objeto
 
 const address1 = {
-  street: "Rua A",
-  number: 123,
+street: "Rua A",
+number: 123,
 };
 
 const address2 = address1; // Isso não é uma cópia, é uma atribuição por referência. Portanto, address1 e address2 apontam para o mesmo objeto na memória.
@@ -86,17 +86,17 @@ console.log("=== SHALLOW COPY E DEEP COPY ===");
 
 // Shallow Copy (cópia superficial): não pega itens aninhados
 const Course1 = {
-  name: "HTML",
-  students: [
+name: "HTML",
+students: [
     {
-      name: "João",
+    name: "João",
     }
-  ],
+],
 };
 
 const Course2 = {
-  ...Course1,
-  name: "CSS",
+...Course1,
+name: "CSS",
 };
 
 // Vai modificar o studants do Course1 também, porque studants é uma referência e não uma cópia
@@ -108,14 +108,14 @@ console.log(Course1, Course2);
 
 // Deep Copy (cópia profunda): cria uma cópia dos itens aninhados
 const Course3 = {
-  ...Course1,
-  name: "JavaScript",
-  students: [
+...Course1,
+name: "JavaScript",
+students: [
     ...Course1.students,
     {
-      name: "José",
+    name: "José",
     }
-  ]
+]
 }
 
 console.log("Criou 2 cursos com estudantes diferentes:");
@@ -129,12 +129,12 @@ console.log(Course1, Course3);
 console.log("=== SHALLOW FREEZING ===");
 
 const book1 = {
-  title: "Objetos Imutáveis",
-  category: "JavaScript",
-  author: {
+title: "Objetos Imutáveis",
+category: "JavaScript",
+author: {
     name: "Joao",
     email: "exemplo@email.com",
-  },
+},
 };
 
 // O JavaScript em si não impõe restrições à modificação dos objetos.
@@ -157,31 +157,31 @@ console.log(book1);
 console.log("=== DEEP FREEZE ===");
 
 const book2 = {
-  title: "Objetos Imutáveis",
-  category: "JavaScript",
-  author: {
+title: "Objetos Imutáveis",
+category: "JavaScript",
+author: {
     name: "Joao",
     email: "exemplo@email.com",
-  },
+},
 };
 
 function deepFreeze(object){
-  const props = Reflect.ownKeys(object);
-  
-  // Itera sobre todas as propriedades do objeto
-  for (const prop of props) {
+const props = Reflect.ownKeys(object);
+
+// Itera sobre todas as propriedades do objeto
+for (const prop of props) {
     // Obtém o valor associado a propriedade atual
     const value = object[prop];
 
     // Verifica se o valor é um objeto ou função para continuar aplicando o Deep Freeze em objetos aninhados
     if (value && typeof value === "object" || typeof value === "function") {
-      // Object.freeze(value)
-      deepFreeze(value)
-      
+    // Object.freeze(value)
+    deepFreeze(value)
+    
     };
-  }
-  // Retorna o objeto congelado
-  return Object.freeze(object)
+}
+// Retorna o objeto congelado
+return Object.freeze(object)
 };
 
 // Chama a função para congelar o objeto com Deep Freeze (congelamento profundo) 
@@ -199,19 +199,19 @@ console.log(book2);
 console.log("=== MANIPULANDO OBJETOS IMUTÁVEIS ===");
 
 const book3 = {
-  title: "Objetos Imutáveis",
-  category: "JavaScript",
-  author: {
+title: "Objetos Imutáveis",
+category: "JavaScript",
+author: {
     name: "Joao",
     email: "exemplo@email.com",
-  },
+},
 };
 
 const updatedBook = {
-  ...book3,
-  title: "Criando um front-end moderno com HTML", // Atualizando o título
-  category: "HTML", // Atualizando a categoria
-  type: "Programming", // Criando uma nova propriedade
+...book3,
+title: "Criando um front-end moderno com HTML", // Atualizando o título
+category: "HTML", // Atualizando a categoria
+type: "Programming", // Criando uma nova propriedade
 }
 
 // Objeto intacto

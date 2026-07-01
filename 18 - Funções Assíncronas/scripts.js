@@ -3,7 +3,7 @@ console.log("=== CONHECENDO O SETTIMEOUT ===");
 // SetTimeout() executa uma função após um intervalo de tempo especificado
 
 setTimeout(() => {
-console.log("Olá")
+    console.log("Olá")
 }, 4000); // Tempo em milissegundos
 
 
@@ -17,14 +17,14 @@ console.log("=== CONHECENDO O SETINTERVAL ===");
 let value = 3;
 
 const interval = setInterval(() => {
-  console.log(value--);
+console.log(value--);
 
-  if (value === 0) {
+if (value === 0) {
     console.log("Feliz Ano Novo!");
 
     // Interrompe o intervalo de execuções
     clearInterval(interval);
-  }
+}
 }, 1000)
 
 
@@ -45,32 +45,79 @@ console.log("=== CONHECENDO FUNÇÕES ASSÍNCRONAS ===");
 console.log("=== CONHECENDO PROMISES ===");
 
 // Função que retorna uma Promise
-
 function AsyncFunction() {
-  return new Promise((resolve, reject) => {
-    // Simula uma operação assíncrona
-    setTimeout(() => {
-      const isSuccess = false;
+    return new Promise((resolve, reject) => {
+        // Simula uma operação assíncrona
+        setTimeout(() => {
+        const isSuccess = true;
 
-      if (isSuccess) {
-        resolve("A operação foi concluída com sucesso!")
-      } else {
-        reject("Algo deu errado")
-      };
-    }, 3000) // Simula uma operação que leva 3 segundos
-  });
+        if (isSuccess) {
+            resolve("A operação foi concluída com sucesso!")
+        } else {
+            reject("Algo deu errado")
+        };
+        }, 3000) // Simula uma operação que leva 3 segundos
+    });
 };
 
 // Visualizando que o retorno é uma Promise, mas não espera o resultado da função assíncrona, apenas retorna a Promise
 // console.log(AsyncFunction());
 
 AsyncFunction().then((response) => { // then() é chamado quando a Promise é resolvida independente do te
-  console.log("Sucesso:", response);
+    console.log("Sucesso:", response);
 }).catch((error) => { // catch() é chamado quando a Promise é rejeitada
-  console.log("Erro:", error);
+    console.log("Erro:", error);
 }).finally(() => { // finally() é chamado quando a Promise é resolvida ou rejeitada
-  console.log("Fim da execução.");
+    console.log("Fim da execução.");
 });
+
+
+// ======================================================================
+
+
+console.log("=== CONHECENDO ASYNC E AWAIT ===");
+
+// Função que retorna uma Promise
+function AsyncFunction2() {
+    return new Promise((resolve, reject) => {
+        // Simula uma operação assíncrona
+        setTimeout(() => {
+        const isSuccess = true;
+
+        if (isSuccess) {
+            resolve("A operação foi concluída com sucesso!")
+        } else {
+            reject("Algo deu errado")
+        };
+        }, 3000) // Simula uma operação que leva 3 segundos
+    });
+};
+
+// Função assíncrona que utiliza await para esperar a resolução da Promise retornada pela função AsyncFunction2
+// async function fetch() {
+//     const response = await AsyncFunction2();
+//     console.log(response);
+// };
+
+// Função (arrow function) assíncrona que utiliza await para esperar a resolução da Promise retornada pela função AsyncFunction2
+// const fetch = async () => {
+//     const response = await AsyncFunction2();
+//     console.log(response);
+// };
+
+// Função assíncrona que utiliza await para esperar a resolução da Promise retornada pela função AsyncFunction2, com tratamento de erros utilizando try/catch/finally
+async function fetch() {
+    try {
+        const response = await AsyncFunction2();
+        console.log(response);
+    } catch (error) {
+        console.log("Erro:", error);
+    } finally {
+        console.log("Fim da execução.");
+    };
+};
+
+fetch();
 
 
 // ======================================================================

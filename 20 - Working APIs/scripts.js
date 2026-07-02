@@ -42,3 +42,27 @@ console.log("=== O QUE É UMA API? ===");
 
 
 // ======================================================================
+
+
+console.log("=== INSTALANDO O JSON-SERVER ===");
+
+// JSON-SERVER é uma biblioteca que permite criar uma API REST fake, ou seja, uma API falsa para testes.
+
+// Para instalar o JSON-SERVER, é necessário ter o Node.js instalado na máquina.
+
+// Para instalar o JSON-SERVER, abra o terminal e digite o seguinte comando:
+
+// npm install json-server
+
+// Depois de instalado, crie um arquivo chamado server.js e configure o arquivo package.json adicionando o seguinte script:
+
+// "scripts": {
+//     "server": "json-server server.json --port=3000"
+// }
+
+// Em seguinda, rode o comando no terminal para iniciar o servidor:
+
+// npm run server
+
+
+// ======================================================================

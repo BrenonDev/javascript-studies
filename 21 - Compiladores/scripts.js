@@ -36,3 +36,18 @@ console.log("=== CONHECENDO OS COMPILADORES ===");
 
 
 // ======================================================================
+
+
+console.log("=== INSTALANDO O BABEL ===");
+
+// Para instalar o Babel, você pode usar o npm (Node Package Manager). Execute o seguinte comando no terminal:
+// npm install --save-dev @babel/core @babel/cli @babel/preset-env
+
+// A pasta node_modules é criada automaticamente quando você instala pacotes usando o npm. Ela contém todas as dependências do projeto, incluindo o Babel e seus plugins. Esta pasta pode ser ignorada no controle de versão (como Git) adicionando-a ao arquivo .gitignore, pois ela pode ser recriada a qualquer momento usando o comando npm install, que lê o arquivo package.json e instala todas as dependências listadas nele.
+
+// O arquivo package.json é um arquivo de configuração do projeto Node.js que contém informações sobre o projeto, incluindo suas dependências, scripts e outras configurações. Ele é criado automaticamente quando você inicializa um projeto Node.js usando o comando npm init. O package.json permite que você gerencie facilmente as dependências do projeto e compartilhe o projeto com outros desenvolvedores.
+
+// O arquivo package-lock.json é gerado automaticamente pelo npm quando você instala pacotes. Ele registra a versão exata de cada pacote instalado, garantindo que as mesmas versões sejam usadas em diferentes ambientes e instalações. Isso ajuda a evitar problemas de compatibilidade e garante que o projeto funcione da mesma forma em todas as máquinas.
+
+
+// ======================================================================

@@ -78,3 +78,40 @@ console.log("=== INSTALANDO UMA VERSÃO ESPECÍFICA ===");
 
 
 // ======================================================================
+
+
+console.log("=== CRIANDO UMA API DE EXEMPLO ===");
+
+
+// Para criar uma API de exemplo, dentro do arquivo chamado server.json adicione o seguinte conteúdo:
+
+// {
+//     "products": [
+//         {
+//             "id": "1",
+//             "name": "Mouse",
+//             "price": 150.25
+//         },
+//         {
+//             "id": "2",
+//             "name": "Teclado",
+//             "price": 90
+//         },
+//         {
+//             "id": "3",
+//             "name": "Monitor",
+//             "price": 500.99
+//         }
+//     ]
+// }
+
+// Em seguinda, rode o comando no terminal para iniciar o servidor:
+
+// npm run server
+
+// A API estará disponível no endereço http://localhost:3000/products
+
+// Observação: para acessar o produto diretamente, basta adicionar o id do produto na URL, por exemplo: http://localhost:3000/products/1
+
+
+// ======================================================================

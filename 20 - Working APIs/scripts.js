@@ -124,6 +124,7 @@ console.log("=== UTILIZANDO O FETCH ===");
 // Para utilizar o Fetch, basta chamar a função fetch() passando como parâmetro a URL da API que deseja acessar.
 
 // Exemplos:
+
 fetch("http://localhost:3000/products").then((response) => {
     response.json().then((data) => {
         console.log(data);
@@ -142,6 +143,8 @@ console.log("=== UTILIZANDO ASYNC E AWAIT ===");
 
 // Para utilizar o Async e Await, basta declarar a função como async e utilizar a palavra-chave await antes da chamada da função que retorna uma Promise.
 
+// Exemplo:
+
 async function fetchProducts() {
     const response = await fetch("http://localhost:3000/products");
     const data = await response.json();
@@ -155,3 +158,18 @@ fetchProducts();
 
 
 // ======================================================================
+
+
+console.log("=== PASSANDO PARÂMETROS NA REQUISIÇÃO ===");
+
+// Para passar parâmetros na requisição, basta adicionar o parâmetro na URL da API que deseja acessar.
+
+// Exemplo:
+
+async function fetchProductById(id) {
+    const response = await fetch(`http://localhost:3000/products/${id}`);
+    const data = await response.json();
+    console.log(data);
+};
+
+fetchProductById(3);

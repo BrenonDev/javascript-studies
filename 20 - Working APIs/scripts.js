@@ -66,3 +66,15 @@ console.log("=== INSTALANDO O JSON-SERVER ===");
 
 
 // ======================================================================
+
+
+console.log("=== INSTALANDO UMA VERSÃO ESPECÍFICA ===");
+
+// Para instalar uma versão específica no JSON-SERVER, rode no terminal o seguinte código:
+
+// npm install json-server@1.0.0-alpha.17
+
+// Observação: após o "@" é informado o código da versão
+
+
+// ======================================================================

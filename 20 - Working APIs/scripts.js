@@ -173,3 +173,35 @@ async function fetchProductById(id) {
 };
 
 fetchProductById(3);
+
+
+// ======================================================================
+
+
+console.log("=== FETCH COM POST ===");
+
+// Para enviar dados para a API, é necessário utilizar o método POST. Para isso, basta adicionar um objeto de configuração na função fetch() com o método POST e os dados que deseja enviar.
+
+// Exemplo:
+
+const productName = document.getElementById("name");
+const productPrice = document.getElementById("price");
+const form = document.getElementsByTagName("form");
+
+addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    await fetch("http://localhost:3000/products", { // URL da API
+        method: "POST", // Método HTTP
+        headers: { // Cabeçalhos da requisição
+            "Content-Type": "application/json" // Tipo de conteúdo da requisição (Por padrão, o JSON é utilizado para enviar dados para a API, mas também é possível enviar dados em outros formatos, como XML, HTML, etc.)
+        },
+        body: JSON.stringify({ // Corpo da requisição
+            id: new Date().getTime().toString(), // Gera um id único para o produto (Por padrão, o JSON-SERVER gera um id automático para o produto, mas é possível gerar um id manualmente, como no exemplo)
+            name: productName.value,
+            price: productPrice.value,
+        })
+    });
+    
+    await fetchProducts();
+});

@@ -134,3 +134,24 @@ fetch("http://localhost:3000/products").then(response => response.json()).then(d
 
 
 // ======================================================================
+
+
+console.log("=== UTILIZANDO ASYNC E AWAIT ===");
+
+// O Async e Await são palavras-chave do JavaScript que permitem escrever código assíncrono de forma mais simples e fácil de entender.
+
+// Para utilizar o Async e Await, basta declarar a função como async e utilizar a palavra-chave await antes da chamada da função que retorna uma Promise.
+
+async function fetchProducts() {
+    const response = await fetch("http://localhost:3000/products");
+    const data = await response.json();
+    console.log(data);
+};
+
+fetchProducts();
+
+// Difenças entre o .then() e o Async/Await:
+// O .then() é uma forma de lidar com Promises, enquanto o Async/Await é uma forma de lidar com Promises de forma mais simples e fácil de entender. O Async/Await é mais legível e fácil de entender, enquanto o .then() pode se tornar confuso quando há muitas Promises encadeadas.
+
+
+// ======================================================================

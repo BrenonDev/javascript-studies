@@ -115,3 +115,22 @@ console.log("=== CRIANDO UMA API DE EXEMPLO ===");
 
 
 // ======================================================================
+
+
+console.log("=== UTILIZANDO O FETCH ===");
+
+// O Fetch é uma API nativa do JavaScript que permite fazer requisições HTTP de forma simples e fácil.
+
+// Para utilizar o Fetch, basta chamar a função fetch() passando como parâmetro a URL da API que deseja acessar.
+
+// Exemplos:
+fetch("http://localhost:3000/products").then((response) => {
+    response.json().then((data) => {
+        console.log(data);
+    });
+});
+
+fetch("http://localhost:3000/products").then(response => response.json()).then(data => console.log(data));
+
+
+// ======================================================================

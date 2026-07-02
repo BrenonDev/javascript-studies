@@ -51,3 +51,37 @@ console.log("=== INSTALANDO O BABEL ===");
 
 
 // ======================================================================
+
+
+console.log("=== CONFIGURANDO E UTILIZANDO O BABEL ===");
+
+// Para configurar o Babel, você pode criar um arquivo chamado babel.config.js na raiz do seu projeto. Este arquivo deve exportar um objeto de configuração que define os presets e plugins que você deseja usar. Por exemplo, para usar o preset @babel/preset-env, você pode adicionar o seguinte conteúdo ao arquivo babel.config.js:
+
+// Configuração do Babel para suportar navegadores antigos (como o Internet Explorer 11)
+
+/*
+const presets = [
+    [
+        "@babel/preset-env",
+        {
+            targets: {
+                ie: "11"
+            }
+        }
+    ]
+]
+module.exports = { presets }
+*/
+
+// OU
+
+// Configuração do Babel mais recente (Babel 7+)
+
+/*
+const presets = ["@babel/preset-env"]
+module.exports = { presets }
+*/
+
+// Para transpilar o código JavaScript usando o Babel, você pode usar o seguinte comando no terminal:
+
+// .\node_modules\.bin\babel .\scripts.js --out-dir dist

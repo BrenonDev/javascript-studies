@@ -144,3 +144,48 @@ module.exports = {
 
 
 // ======================================================================
+
+
+console.log("=== COMO INCLUIR O CSS ===");
+
+// Para incluir o CSS no processo de empacotamento do Webpack, você pode usar os loaders style-loader e css-loader. Esses loaders permitem que você importe arquivos CSS diretamente em seus arquivos JavaScript.
+
+// Para instalar os loaders, você pode usar o seguinte comando no terminal:
+
+// npm install --save-dev style-loader css-loader
+
+// Em seguida, você pode configurar os loaders no arquivo webpack.config.js. Aqui está um exemplo de configuração:
+
+/*
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "js", "index.js"),
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    mode: "development",
+    plugins: [new HTMLWebpackPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+                exclude: "/node_modules",
+            },
+        ],
+    },
+};
+*/
+
+// Com essa configuração, o Webpack irá processar os arquivos CSS importados em seus arquivos JavaScript e injetá-los no HTML gerado pelo plugin html-webpack-plugin. Isso permite que você gerencie o CSS de forma modular e facilite a manutenção do seu projeto.
+
+// Para importar um arquivo CSS em seu arquivo JavaScript, você pode usar a seguinte sintaxe:
+
+// import "../css/styles.css";
+
+// Com isso, o Webpack irá processar o arquivo styles.css e incluí-lo no bundle final gerado na pasta dist.
+
+// ======================================================================

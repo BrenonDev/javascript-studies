@@ -8,7 +8,14 @@ module.exports = {
         path: path.resolve(__dirname, "dist")
     },
     mode: "development",
-    plugins: [
-        new HTMLWebpackPlugin()
-    ]
+    plugins: [new HTMLWebpackPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+                exclude: "/node_modules",
+            },
+        ],
+    },
 };

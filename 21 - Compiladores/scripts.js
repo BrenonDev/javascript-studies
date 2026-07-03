@@ -85,3 +85,29 @@ module.exports = { presets }
 // Para transpilar o código JavaScript usando o Babel, você pode usar o seguinte comando no terminal:
 
 // .\node_modules\.bin\babel .\scripts.js --out-dir dist
+
+
+// ======================================================================
+
+
+console.log("=== CRIANDO UM SCRIPT PARA COMPILAR ===");
+
+// Para criar um script no package.json que execute o Babel, você pode adicionar uma seção "scripts" ao arquivo package.json. Por exemplo:
+
+/*
+{
+  "scripts": {
+    "build": "babel main.js --out-dir ./dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2"
+  }
+}
+*/
+
+// Com isso, você pode executar o comando npm run build no terminal para transpilar o código JavaScript usando o Babel e gerar os arquivos de saída na pasta dist.
+
+
+// ======================================================================

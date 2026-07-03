@@ -111,3 +111,36 @@ module.exports = {
 
 
 // ======================================================================
+
+
+console.log("=== COMO INCLUIR O HTML ===");
+
+// Para incluir o HTML no processo de empacotamento do Webpack, você pode usar o plugin html-webpack-plugin. Este plugin gera automaticamente um arquivo HTML que inclui o arquivo JavaScript empacotado.
+
+// Para instalar o plugin, você pode usar o seguinte comando no terminal:
+
+// npm install --save-dev html-webpack-plugin
+
+// Em seguida, você pode configurar o plugin no arquivo webpack.config.js. Aqui está um exemplo de configuração:
+
+/*
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "js", "index.js"),
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    mode: "development",
+    plugins: [
+        new HTMLWebpackPlugin()
+    ]
+};
+*/
+
+// Com essa configuração, o plugin html-webpack-plugin irá gerar um arquivo HTML na pasta dist que inclui automaticamente o arquivo main.js empacotado pelo Webpack. Isso facilita a inclusão do JavaScript no seu projeto sem precisar criar manualmente um arquivo HTML.
+
+
+// ======================================================================

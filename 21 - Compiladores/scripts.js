@@ -57,26 +57,6 @@ console.log("=== CONFIGURANDO E UTILIZANDO O BABEL ===");
 
 // Para configurar o Babel, você pode criar um arquivo chamado babel.config.js na raiz do seu projeto. Este arquivo deve exportar um objeto de configuração que define os presets e plugins que você deseja usar. Por exemplo, para usar o preset @babel/preset-env, você pode adicionar o seguinte conteúdo ao arquivo babel.config.js:
 
-// Configuração do Babel para suportar navegadores antigos (como o Internet Explorer 11)
-
-/*
-const presets = [
-    [
-        "@babel/preset-env",
-        {
-            targets: {
-                ie: "11"
-            }
-        }
-    ]
-]
-module.exports = { presets }
-*/
-
-// OU
-
-// Configuração do Babel mais recente (Babel 7+)
-
 /*
 const presets = ["@babel/preset-env"]
 module.exports = { presets }
@@ -132,7 +112,8 @@ console.log("=== AUTOMATIZANDO AS MUDANÇAS ===");
 /*
 {
   "scripts": {
-    "build": "babel main.js --watch --out-dir ./dist"
+    "build": "babel main.js --out-dir ./dist",
+    "dev": "babel main.js --watch --out-dir ./dist"
   },
   "devDependencies": {
     "@babel/cli": "^8.0.1",
@@ -140,4 +121,29 @@ console.log("=== AUTOMATIZANDO AS MUDANÇAS ===");
     "@babel/preset-env": "^8.0.2"
   }
 }
+*/
+
+// Com isso, você pode executar o comando npm run dev no terminal para iniciar o modo de observação. O Babel irá monitorar o arquivo main.js e gerar automaticamente a versão compilada na pasta dist sempre que houver alterações no código-fonte.
+
+// ======================================================================
+
+
+console.log("=== CONFIGURANDO TARGETS ===");
+
+// O Babel permite configurar os targets, que são os ambientes de execução para os quais você deseja que o código seja compatível. Isso é feito no arquivo babel.config.js, onde você pode especificar as versões mínimas dos navegadores ou ambientes que deseja suportar.
+
+// Por exemplo, para suportar navegadores antigos como Internet Explorer 11, você pode configurar os targets da seguinte forma:
+
+/*
+const presets = [
+    [
+        "@babel/preset-env",
+        {
+            targets: {
+                ie: "11"
+            }
+        }
+    ]
+]
+module.exports = { presets }
 */

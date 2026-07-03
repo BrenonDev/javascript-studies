@@ -188,4 +188,54 @@ module.exports = {
 
 // Com isso, o Webpack irá processar o arquivo styles.css e incluí-lo no bundle final gerado na pasta dist.
 
+
+// ======================================================================
+
+
+console.log("=== COMO INCLUIR O BABEL ===");
+
+// Para incluir o Babel no processo de empacotamento do Webpack, você pode usar o loader babel-loader. O Babel é um compilador JavaScript que permite que você use recursos modernos da linguagem, mesmo em navegadores mais antigos.
+
+// Para instalar o Babel e o loader, você pode usar o seguinte comando no terminal:
+
+// npm install --save-dev babel-loader @babel/core @babel/preset-env
+
+// Em seguida, você pode configurar o loader no arquivo webpack.config.js. Aqui está um exemplo de configuração:
+
+/*
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "js", "index.js"),
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    mode: "development",
+    plugins: [new HTMLWebpackPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+                exclude: "/node_modules",
+            },
+            {
+                test: /\.js$/i,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [["@babel/preset-env", {targets: "defaults"}]]
+                    }
+                },
+                exclude: "/node_modules",
+            },
+        ],
+    },
+};
+*/
+
+// Com essa configuração, o Webpack irá processar os arquivos JavaScript usando o Babel e transpilar o código para uma versão compatível com os navegadores especificados na opção targets do preset @babel/preset-env. Isso permite que você use recursos modernos do JavaScript sem se preocupar com a compatibilidade com navegadores mais antigos.
+
 // ======================================================================

@@ -64,3 +64,50 @@ console.log("=== INSTALANDO E EXECUTANDO O WEBPACK ===");
 
 
 // ======================================================================
+
+
+console.log("=== CONFIGURANDO O WEBPACK ===");
+
+// Antes de configurar o Webpack, o arquivo package.json deve conter as dependências do Webpack e o script chamando somente o webpack. Aqui está um exemplo de como o arquivo package.json pode ser configurado:
+
+/*
+{
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^5.108.3",
+    "webpack-cli": "^7.1.0"
+  }
+}
+*/
+
+// Deste modo, o Webpack irá procurar automaticamente pelo arquivo webpack.config.js na raiz do projeto para obter as configurações necessárias para empacotar os arquivos JavaScript.
+
+// Para configurar o Webpack, você pode criar um arquivo chamado webpack.config.js na raiz do seu projeto. Aqui está um exemplo de configuração básica:
+
+/*
+const path = require("path");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "js", "index.js"),
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    mode: "development"
+};
+*/
+
+// A biblioteca path é usada para lidar com caminhos de arquivos e diretórios de forma independente do sistema operacional. No exemplo acima, estamos usando o método path.resolve() para criar caminhos absolutos para os arquivos de entrada e saída.
+
+// A propriedade entry especifica o arquivo de entrada principal do seu projeto, que é o ponto de partida para o Webpack analisar as dependências.
+
+// A propriedade output define o nome do arquivo de saída (main.js) e o diretório onde ele será gerado (dist).
+
+// A propriedade mode define o modo de compilação do Webpack. No exemplo acima, estamos usando o modo "development" para facilitar a depuração durante o desenvolvimento. Para produção, você pode usar o modo "production" para otimizar o código final.
+
+// Com essa configuração, ao executar o comando npm run build, o Webpack irá empacotar os arquivos JavaScript e gerar o arquivo main.js na pasta dist.
+
+
+// ======================================================================

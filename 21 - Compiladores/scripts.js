@@ -111,3 +111,15 @@ console.log("=== CRIANDO UM SCRIPT PARA COMPILAR ===");
 
 
 // ======================================================================
+
+
+console.log("=== UTILIZANDO O ARQUIVO COMPILADO ===");
+
+// Após a execução do comando npm run build, o Babel irá gerar um arquivo compilado na pasta dist. Você pode incluir esse arquivo em seu projeto HTML ou JavaScript para utilizar o código transpilado.
+
+// Depois de cada modificação no código-fonte, você precisará executar novamente o comando npm run build para gerar a versão atualizada do arquivo compilado na pasta dist. Isso garante que as alterações feitas no código-fonte sejam refletidas no arquivo transpilado.
+
+
+// ======================================================================
+
+

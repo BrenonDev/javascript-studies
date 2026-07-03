@@ -123,3 +123,21 @@ console.log("=== UTILIZANDO O ARQUIVO COMPILADO ===");
 // ======================================================================
 
 
+console.log("=== AUTOMATIZANDO AS MUDANÇAS ===");
+
+// Para automatizar o processo de compilação sempre que houver alterações no código-fonte, você pode usar a opção --watch do Babel. Isso fará com que o Babel monitore os arquivos de origem e recompile automaticamente sempre que houver uma modificação.
+
+// Para usar o modo de observação, você pode adicionar um script no package.json da seguinte forma:
+
+/*
+{
+  "scripts": {
+    "build": "babel main.js --watch --out-dir ./dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^8.0.1",
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2"
+  }
+}
+*/

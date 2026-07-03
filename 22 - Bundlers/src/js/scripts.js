@@ -238,4 +238,84 @@ module.exports = {
 
 // Com essa configuração, o Webpack irá processar os arquivos JavaScript usando o Babel e transpilar o código para uma versão compatível com os navegadores especificados na opção targets do preset @babel/preset-env. Isso permite que você use recursos modernos do JavaScript sem se preocupar com a compatibilidade com navegadores mais antigos.
 
+
 // ======================================================================
+
+
+console.log("=== WEBPACK DEV SERVER ===");
+
+// O Webpack Dev Server é uma ferramenta que permite executar um servidor de desenvolvimento local para o seu projeto. Ele fornece recursos como recarregamento automático do navegador quando os arquivos são alterados, facilitando o processo de desenvolvimento.
+
+// Para instalar o Webpack Dev Server, você pode usar o seguinte comando no terminal:
+
+// npm install --save-dev webpack-dev-server
+
+// Em seguida, você pode configurar o servidor no arquivo webpack.config.js. Aqui está um exemplo de configuração:
+
+/*
+const path = require("path");
+const HTMLWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src", "js", "index.js"),
+    output: {
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist")
+    },
+    mode: "development",
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist", "index.html"),
+        },
+        port: "3000",
+        open: true,
+    },
+    plugins: [new HTMLWebpackPlugin()],
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+                exclude: "/node_modules",
+            },
+            {
+                test: /\.js$/i,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [["@babel/preset-env", {targets: "defaults"}]]
+                    }
+                },
+                exclude: "/node_modules",
+            },
+        ],
+    },
+};
+*/
+
+// Com essa configuração, o Webpack Dev Server irá servir os arquivos do seu projeto a partir da pasta dist e abrir automaticamente o navegador na porta 3000. Além disso, ele irá recarregar o navegador sempre que você fizer alterações nos arquivos do projeto, facilitando o processo de desenvolvimento.
+
+// Para iniciar o servidor de desenvolvimento, você pode adicionar um script no arquivo package.json. Aqui está um exemplo de como o arquivo package.json pode ser configurado:
+
+/*
+{
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.7",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.108.3",
+    "webpack-cli": "^7.1.0",
+    "webpack-dev-server": "^5.2.6"
+  }
+}
+
+*/
+
+// Com isso, você pode executar o comando npm run dev no terminal para iniciar o servidor de desenvolvimento do Webpack e abrir automaticamente o navegador na porta 3000.

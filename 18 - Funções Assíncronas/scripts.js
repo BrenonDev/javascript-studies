@@ -44,6 +44,11 @@ console.log("=== CONHECENDO FUNÇÕES ASSÍNCRONAS ===");
 
 console.log("=== CONHECENDO PROMISES ===");
 
+// Uma Promise é um objeto que representa a eventual conclusão (ou falha) de uma operação assíncrona e seu valor resultante. Ela pode estar em um dos três estados:
+// - Pending (Pendente): Estado inicial, antes da Promise ser resolvida ou rejeitada. 
+// - Fulfilled (Cumprida): A operação assíncrona foi concluída com sucesso, e a Promise foi resolvida com um valor.
+// - Rejected (Rejeitada): A operação assíncrona falhou, e a Promise foi rejeitada com um motivo (erro).
+
 // Função que retorna uma Promise
 function AsyncFunction() {
     return new Promise((resolve, reject) => {
@@ -76,6 +81,8 @@ AsyncFunction().then((response) => { // then() é chamado quando a Promise é re
 
 
 console.log("=== CONHECENDO ASYNC E AWAIT ===");
+
+// Async/Await é uma forma de escrever código assíncrono de maneira mais legível e estruturada, utilizando Promises. A palavra-chave async é usada para declarar uma função assíncrona, enquanto a palavra-chave await é usada para esperar a resolução de uma Promise dentro de uma função assíncrona.
 
 // Função que retorna uma Promise
 function AsyncFunction2() {

@@ -27,7 +27,7 @@ Estudos de JavaScript organizados em módulos para prática, revisão e consulta
 
 Este repositório registra minha evolução em JavaScript com exemplos práticos e comentados.
 
-A trilha avança dos fundamentos ao DOM, APIs e ferramentas de build. O foco é **aprendizado e experimentação**.
+A trilha avança dos fundamentos ao DOM, APIs e ferramentas de build. O foco é **aprendizado, experimentação e registro de progresso**.
 
 <br>
 
@@ -77,29 +77,29 @@ A trilha avança dos fundamentos ao DOM, APIs e ferramentas de build. O foco é 
 
 ```text
 JavaScript/
-├── 1 - Iniciando os Estudos/                   # Introdução ao JavaScript e primeiros comandos
-├── 2 - Variáveis e Constantes/                 # Declaração e uso de var, let e const
-├── 3 - Expressões e Operadores/                # Operadores aritméticos, lógicos e comparações
-├── 4 - Condicionais e Controle de Fluxo/       # Estruturas de decisão e controle do código
-├── 5 - Funções/                                # Declaração, parâmetros, retornos e escopo
-├── 6 - Document Object Model/                  # Seleção e manipulação de elementos da página
-├── 7 - Depuração de Código/                    # Técnicas e ferramentas para encontrar erros
-├── 8 - Objetos/                                # Criação, propriedades e métodos de objetos
-├── 9 - Métodos de Texto/                       # Manipulação e formatação de strings
-├── 10 - Arrays/                                # Criação, acesso e alteração de listas
-├── 11 - Repetição e Iteração/                  # Laços e percursos sobre coleções
-├── 12 - Data e Hora/                           # Criação e manipulação de datas
-├── 13 - Classes/                               # Classes, construtores, métodos e herança
-├── 14 - JavaScript Moderno/                    # Recursos e sintaxe moderna da linguagem
-├── 15 - Métodos de Array/                      # Map, filter, reduce e outros métodos
-├── 16 - Imutabilidade/                         # Cópias e atualização de dados sem mutação
-├── 17 - Módulos/                               # Importação e exportação de código
-├── 18 - Funções Assíncronas/                   # Promises, async/await e event loop
-├── 19 - Pacotes/                               # Bibliotecas, npm e versionamento semântico
-├── 20 - Working APIs/                          # Fetch API, HTTP e JSON Server
-├── 21 - Compiladores/                          # Transpilação de JavaScript com Babel
-├── 22 - Bundlers/                              # Empacotamento e servidor local com Webpack
-└── README.md                                   # Apresentação e índice do repositório
+├── 1 - Iniciando os Estudos/               # Introdução ao JavaScript e primeiros comandos
+├── 2 - Variáveis e Constantes/             # Declaração e uso de var, let e const
+├── 3 - Expressões e Operadores/            # Operadores aritméticos, lógicos e comparações
+├── 4 - Condicionais e Controle de Fluxo/   # Estruturas de decisão e controle do código
+├── 5 - Funções/                            # Declaração, parâmetros, retornos e escopo
+├── 6 - Document Object Model/              # Seleção e manipulação de elementos da página
+├── 7 - Depuração de Código/                # Técnicas e ferramentas para encontrar erros
+├── 8 - Objetos/                            # Criação, propriedades e métodos de objetos
+├── 9 - Métodos de Texto/                   # Manipulação e formatação de strings
+├── 10 - Arrays/                            # Criação, acesso e alteração de listas
+├── 11 - Repetição e Iteração/              # Laços e percursos sobre coleções
+├── 12 - Data e Hora/                       # Criação e manipulação de datas
+├── 13 - Classes/                           # Classes, construtores, métodos e herança
+├── 14 - JavaScript Moderno/                # Recursos e sintaxe moderna da linguagem
+├── 15 - Métodos de Array/                  # Map, filter, reduce e outros métodos
+├── 16 - Imutabilidade/                     # Cópias e atualização de dados sem mutação
+├── 17 - Módulos/                           # Importação e exportação de código
+├── 18 - Funções Assíncronas/               # Promises, async/await e event loop
+├── 19 - Pacotes/                           # Bibliotecas, npm e versionamento semântico
+├── 20 - Working APIs/                      # Fetch API, HTTP e JSON Server
+├── 21 - Compiladores/                      # Transpilação de JavaScript com Babel
+├── 22 - Bundlers/                          # Empacotamento e servidor local com Webpack
+└── README.md                               # Apresentação e índice do repositório
 ```
 
 <br>
@@ -110,7 +110,7 @@ JavaScript/
 
 Feito com ☕, curiosidade e muitos `console.log()`.
 
-Agradecimento especial à **Rocketseat** por proporcionar conteúdos que contribuíram para esta jornada de aprendizado. 💜
+Agradecimento especial à **Rocketseat** pelos conteúdos que apoiaram esta jornada de aprendizado. 💜
 
 </div>
 
